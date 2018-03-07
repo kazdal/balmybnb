@@ -7,14 +7,14 @@ class SessionForm extends React.Component {
 
     if (this.props.formType === 'Sign up') {
       this.state = {
-        username: '',
+        email: '',
         password: '',
         firstName: '',
         lastName: ''
       };
     } else {
       this.state = {
-        username: '',
+        email: '',
         password: ''
       };
     }
@@ -104,8 +104,8 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
             <div className="login-form">
                 <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
+                  value={this.state.email}
+                  onChange={this.update('email')}
                   className="login-input"
                   placeholder="Email Address"
                 />
