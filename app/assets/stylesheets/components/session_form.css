@@ -126,6 +126,12 @@
   cursor: pointer;
 }
 
+.session-demo-login {
+  color: white;
+  background-color: #008489;
+  margin-top: 15px;
+}
+
 .close-x {
   align-self: flex-start;
   margin-top: 24px;
