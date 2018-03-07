@@ -5,17 +5,18 @@
   width: 100%;
   display: flex;
   background-color: white;
+  border-bottom: 1px solid #DBDBDB;
 }
 
-.nav-bar ul {
+.nav-bar .nav-items {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 13.3px;
 }
 
-.nav-bar ul li {
-  padding: 30px 12px;
+.nav-bar .nav-items li {
+  padding: 33px 12px;
   margin: 0 5px;
   color: #484848;
   -moz-box-sizing: border-box;
@@ -23,11 +24,12 @@
   border-bottom: 1.85px solid transparent;
 }
 
-.nav-bar ul li:last-child {
+.nav-bar .nav-items li:last-child {
   margin-right: 25px;
+  padding: 25px 12px;
 }
 
-.nav-bar ul li:hover {
+.nav-bar .nav-items li:hover {
   cursor: pointer;
   /* height: 100% !important; */
   /* vertical-align: middle !important; */

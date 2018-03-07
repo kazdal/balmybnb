@@ -8,7 +8,7 @@ export default class Nav extends React.Component {
   signedInNav() {
     return (
       <nav>
-        <ul>
+        <ul className="nav-items">
           <li><a>Become a host</a></li>
           <li><a>Saved</a></li>
           <li><a>Trips</a></li>
@@ -22,7 +22,7 @@ export default class Nav extends React.Component {
   signedOutNav() {
     return (
       <nav>
-        <ul>
+        <ul className="nav-items">
           <li><a>Become a host</a></li>
           <li><a>Help</a></li>
           <li onClick={() => this.props.openModal('signup')}><a>Sign Up</a></li>
