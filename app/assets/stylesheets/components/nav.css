@@ -9,17 +9,18 @@
 
 .nav-bar ul {
   display: flex;
-  list-style: none;
-  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13.3px;
 }
 
 .nav-bar ul li {
-  padding: 30px 5px;
+  padding: 30px 12px;
   margin: 0 5px;
   color: #484848;
-  -moz-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-  border-bottom: 1.85px solid transparent !important;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1.85px solid transparent;
 }
 
 .nav-bar ul li:last-child {
@@ -30,7 +31,7 @@
   cursor: pointer;
   /* height: 100% !important; */
   /* vertical-align: middle !important; */
-  border-bottom: 1.85px solid #484848 !important;
+  border-bottom: 1.85px solid #484848;
 }
 
 .nav-bar svg {
@@ -39,4 +40,17 @@
   font-size: 30px;
   margin-left: 25px;
   cursor: pointer;
+}
+
+.nav-picture {
+  height: 28px;
+  width: 28px;
+  background-color: #F2F2F2;
+  box-shadow: 0 0 0 2px #DBDBDB;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
 }

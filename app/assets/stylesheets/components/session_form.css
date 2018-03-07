@@ -24,13 +24,21 @@
   color: #484848;
 }
 
-.login-form-container a {
+.login-form-container p {
+  font-weight: 300;
+  font-size: 19px;
+}
+
+.login-form-container p a {
   color: #008489;
   text-decoration: none;
+  margin-left: 10px;
+  font-weight: 400;
 }
 
 .login-form-container a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .login-form-box {
@@ -57,7 +65,18 @@
   margin-bottom: 15px;
   color: #484848;
   outline: 1px transparent;
+}
 
+.login-input-wrapper {
+  position: relative;
+}
+
+.login-input-wrapper svg {
+  position: absolute;
+  right: 15px;
+  top: 25%;
+  color: #484848b5;
+  font-size: 18px;
 }
 
 .login-input:focus {
@@ -104,5 +123,14 @@
 }
 
 .session-submit:hover {
+  cursor: pointer;
+}
+
+.close-x {
+  align-self: flex-start;
+  margin-top: 24px;
+}
+
+.close-x:hover {
   cursor: pointer;
 }
