@@ -47,9 +47,18 @@ class SessionForm extends React.Component {
 
   oppositeAction() {
     if (this.props.formType === 'Sign up') {
-      return <p>Already have an account? {this.props.navLink}</p>;
+      return (
+        <p>Already have an account? 
+          {this.props.otherForm}
+        </p>
+      );
     } else {
-      <p>Don&#39;t have an account? {this.props.navLink}</p>;
+      return (
+        <p>
+          Don&#39;t have an account?
+          {this.props.otherForm}
+        </p>
+      );
     }
   }
 
@@ -57,37 +66,49 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'Sign up') {
       return (
         <div className="login-extra-inputs">
-          <input type="text"
-            value={this.state.first_name}
-            onChange={this.update('first_name')}
-            className="login-input"
-            placeholder="First name"
-            />
+          <span className="login-input-wrapper">
+            <i className="far fa-user"></i>
+            <input type="text"
+              value={this.state.first_name}
+              onChange={this.update('first_name')}
+              className="login-input"
+              placeholder="First name"
+              />
+          </span>
 
-          <input type="text"
-            value={this.state.last_name}
-            onChange={this.update('last_name')}
-            className="login-input"
-            placeholder="Last name"
-            />
+          <span className="login-input-wrapper">
+            <i className="far fa-user"></i>
+            <input type="text"
+              value={this.state.last_name}
+              onChange={this.update('last_name')}
+              className="login-input"
+              placeholder="Last name"
+              />
+          </span>
 
-          <input type="password"
-            value={this.state.password}
-            onChange={this.update('password')}
-            className="login-input"
-            placeholder="Create a Password"
-            />
+          <span className="login-input-wrapper">
+            <i className="fas fa-lock"></i>
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              placeholder="Create a Password"
+              />
+          </span>
         </div>
       );
     } else {
       return (
         <div className="login-extra-inputs">
-          <input type="password"
-            value={this.state.password}
-            onChange={this.update('password')}
-            className="login-input"
-            placeholder="Password"
-          />
+          <span className="login-input-wrapper">
+            <i className="fas fa-lock"></i>
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              placeholder="Password"
+            />
+          </span>
         </div>
       );
     }
@@ -96,22 +117,31 @@ class SessionForm extends React.Component {
   render() {
 
     return (
-      <div className="modal">
-        <div className="login-form-container">
+      <div className="modal" onClick={this.props.closeModal}>
+        <div className="login-form-container" onClick={e => e.stopPropagation()}>
+          <div onClick={this.props.closeModal} className="close-x">X</div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
             {this.renderErrors()}
+
             <div className="login-form">
+              <span className="login-input-wrapper">
+                <i className="far fa-envelope"></i>
                 <input type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
                   className="login-input"
                   placeholder="Email Address"
                 />
+              </span>
+
               { this.additionalInputs() }
+
               <input className="session-submit" type="submit" value={this.props.formType} />
             </div>
+
             <hr />
+
             { this.oppositeAction() }
           </form>
         </div>

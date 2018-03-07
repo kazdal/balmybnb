@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
+import { openModal } from '../../actions/modal_actions';
 import Nav from './nav';
 
 const msp = state => {
   return {
-    // loginModal: state.ui.loginModal,
-    // sessionModal: state.ui.sessionModal
+    currentUser: state.session.currentUser
   };
 };
 
 const mdp = dispatch => {
   return {
-    // toggleLoginModal: () => dispatch(),
-    // toggleSessionModal: () => dispatch()
+    logout: () => dispatch(logout()),
+    openModal: modal => dispatch(openModal(modal))
   };
 };
 
