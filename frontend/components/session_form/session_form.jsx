@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
   oppositeAction() {
     if (this.props.formType === 'Sign up') {
       return (
-        <p>Already have an account? 
+        <p>Already have an account?
           {this.props.otherForm}
         </p>
       );
@@ -138,6 +138,11 @@ class SessionForm extends React.Component {
               { this.additionalInputs() }
 
               <input className="session-submit" type="submit" value={this.props.formType} />
+
+              { this.props.formType === "Log in" ? <input className="session-submit session-demo-login" type="submit" value="Demo Login" onClick={() => (this.setState({
+                email: 'demo@demo.com', password: '123456'
+              }))} /> : "" }
+
             </div>
 
             <hr />
