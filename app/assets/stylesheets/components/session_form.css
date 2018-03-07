@@ -64,7 +64,8 @@
   height: 25px;
   margin-bottom: 15px;
   color: #484848;
-  outline: 1px transparent;
+  outline: 0px transparent;
+  border: 1px solid #484848b5;
 }
 
 .login-input-wrapper {
@@ -80,10 +81,8 @@
 }
 
 .login-input:focus {
-  outline-color: #008489;
-  outline: 1px #008489 solid;
-  border-color: transparent;
-  border-width: 2px;
+  outline: 0px transparent;
+  border: 1px #008489 solid;
 }
 
 
@@ -139,4 +138,15 @@
 
 .close-x:hover {
   cursor: pointer;
+}
+
+.form-line {
+  border-bottom: 1px solid #DBDBDB;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 0px 50%;
+}
+
+.session-errors-list {
+  margin-bottom: 15px;
 }

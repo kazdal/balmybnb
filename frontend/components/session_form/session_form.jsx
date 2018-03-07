@@ -30,12 +30,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="session-errors-list">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
   oppositeAction() {
     if (this.props.formType === 'Sign up') {
       return (
-        <p>Already have an account?
+        <p>Already have a balmybnb account?
           {this.props.otherForm}
         </p>
       );
@@ -143,11 +143,11 @@ class SessionForm extends React.Component {
                 email: 'demo@demo.com', password: '123456'
               }))} /> : "" }
 
+              <div className="form-line"></div>
+              { this.oppositeAction() }
             </div>
 
-            <hr />
 
-            { this.oppositeAction() }
           </form>
         </div>
       </div>
