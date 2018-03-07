@@ -45,45 +45,42 @@ class SessionForm extends React.Component {
     );
   }
 
-  render() {
-    let oppositeAction;
-
-    let additionalInputs;
+  oppositeAction() {
     if (this.props.formType === 'Sign up') {
-      oppositeAction = () => (
-        <p>Already have an account? {this.props.navLink}</p>
-      );
+      return <p>Already have an account? {this.props.navLink}</p>;
+    } else {
+      <p>Don&#39;t have an account? {this.props.navLink}</p>;
+    }
+  }
 
-      additionalInputs = () => (
+  additionalInputs () {
+    if (this.props.formType === 'Sign up') {
+      return (
         <div>
           <input type="text"
             value={this.state.firstName}
             onChange={this.update('firstName')}
             className="login-input"
             placeholder="First name"
-          />
+            />
 
           <input type="text"
             value={this.state.lastName}
             onChange={this.update('lastName')}
             className="login-input"
             placeholder="Last name"
-          />
+            />
 
           <input type="password"
             value={this.state.password}
             onChange={this.update('password')}
             className="login-input"
             placeholder="Create a Password"
-          />
+            />
         </div>
       );
     } else {
-      oppositeAction = () => (
-        <p>Don&#39;t have an account? {this.props.navLink}</p>
-      );
-
-      additionalInputs = () => (
+      return (
         <div>
           <input type="password"
             value={this.state.password}
@@ -94,7 +91,9 @@ class SessionForm extends React.Component {
         </div>
       );
     }
+  }
 
+  render() {
 
     return (
       <div className="modal">
