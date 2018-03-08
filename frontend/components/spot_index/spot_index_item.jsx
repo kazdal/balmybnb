@@ -9,12 +9,13 @@ export default class SpotIndexItem extends React.Component {
     const { title, description, price, location } = this.props.spot;
 
     return (
-      <section className="spot-index-item">
+      <li className="spot-index-item">
+        <div className="delete-this THISISAN-IMAGEPLACEHOLDER"></div>
         <h2>
           { title }
         </h2>
         <p>From ${ price } per night</p>
-      </section>
+      </li>
     );
   }
 }

@@ -17,7 +17,10 @@ export default class SpotIndex extends React.Component {
     return (
       <main className="spot-index-main">
         <section className="spot-index-left-items">
-          <h1>275 balmybnb homes in Los Angeles</h1>
+          <div className="spot-index-header">
+            <h1>275 balmybnb homes in Los Angeles</h1>
+            <p>Explore homes verified for quality & comfort in cities around the world</p>
+          </div>
           <ul>
             { allSpots }
           </ul>
