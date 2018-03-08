@@ -7,6 +7,10 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  # has_many :spots
+  # has_many :reviews
+  # has_many :bookings
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(email, password)
