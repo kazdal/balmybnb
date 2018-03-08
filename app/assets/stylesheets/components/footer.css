@@ -1,0 +1,38 @@
+.page-footer {
+  margin: 0 auto;
+  width: 60%;
+  border-color: rgb(118, 118, 118);
+}
+
+.page-footer section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(118, 118, 118);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.page-footer section .footer-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+.page-footer section .footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer section .footer-right li {
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.page-footer section .footer-right svg {
+  fill: rgb(118, 118, 118);
+  color: rgb(118, 118, 118);
+  font-size: 20px;
+}
