@@ -65,7 +65,7 @@
   margin-bottom: 15px;
   color: #484848;
   outline: 0px transparent;
-  border: 1px solid #484848b5;
+  border: 1px solid #DBDBDB;
 }
 
 .login-input-wrapper {
@@ -76,7 +76,7 @@
   position: absolute;
   right: 15px;
   top: 25%;
-  color: #484848b5;
+  color: #484848;
   font-size: 18px;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .login-form-box ul li {
-  color: #484848;
+  color: #DBDBDB;
   list-style: none;
 }
 
