@@ -1,0 +1,7 @@
+.home-page {
+  background: url('./s.png');
+  background-size: cover;
+  width: 100vw;
+  min-height: 550px;
+  height: 80vh;
+}
