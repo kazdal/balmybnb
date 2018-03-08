@@ -58,7 +58,7 @@
 
 .login-input {
   font-size: 19px;
-  font-weight: 300;
+  font-weight: lighter;
   padding: 11px;
   width: 480px;
   height: 25px;
@@ -149,4 +149,8 @@
 
 .session-errors-list {
   margin-bottom: 15px;
+}
+
+.login-form-box > .session-errors-list > li {
+  color: #484848;
 }
