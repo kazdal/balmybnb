@@ -5,6 +5,10 @@
       user: current_user
     ).html_safe %>
   <% end %>
+
+  window.staticImages = {
+    mainLogo: "<%= asset_url('dkang.svg') %>"
+  }
 </script>
 
 <main id="root"></main>

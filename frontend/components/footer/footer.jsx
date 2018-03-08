@@ -18,7 +18,8 @@ export default class Footer extends React.Component {
 
           <ul className="footer-right">
             <li>made by
-              <img src="%image_path(dkang.png)%"></img></li>
+              <img src={window.staticImages.mainLogo}></img>
+            </li>
             <li>
               <a href="https://www.github.com/dkvng"><i class="fab fa-github"></i></a>
             </li>

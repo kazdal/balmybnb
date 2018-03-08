@@ -31,8 +31,24 @@
   font-size: 14px;
 }
 
+.page-footer section .footer-right li:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer section .footer-right li:last-child {
+  margin-right: 15px;
+}
+
 .page-footer section .footer-right svg {
   fill: rgb(118, 118, 118);
   color: rgb(118, 118, 118);
   font-size: 20px;
+
+}
+
+.page-footer section .footer-right img {
+  height: 90px;
+  margin: -25px -10px -25px -5px;
 }
