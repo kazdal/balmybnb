@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/session_api_util';
+import * as APIUtil from '../util/spot_api_util';
 
 export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
@@ -15,7 +15,7 @@ export const receiveSpot = spot => ({
 
 export const fetchSpots = () => dispatch => (
   APIUtil.fetchSpots().then(spots => (
-    dispatch(receiveSpots(spots))
+    dispatch(receiveAllSpots(spots))
   ))
 );
 
