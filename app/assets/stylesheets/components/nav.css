@@ -37,8 +37,11 @@
   border-bottom: 1.85px solid #484848;
 }
 
-.nav-bar svg {
+.nav-bar > a:first-of-type {
   margin-right: auto;
+}
+
+.nav-bar svg {
   color: #FC515F;
   font-size: 30px;
   margin-left: 25px;

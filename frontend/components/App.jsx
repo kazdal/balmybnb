@@ -15,7 +15,9 @@ const App = () => (
   <div>
     <NavContainer />
     <Modal />
-    <Home />
+
+    <Route exact path="/" component={Home} />
+
     <Footer />
   </div>
 );
