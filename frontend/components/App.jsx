@@ -7,6 +7,7 @@ import NavContainer from './nav/nav_container';
 import Modal from './modal/modal';
 
 import Home from './home/home';
+import Footer from './footer/footer';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -15,6 +16,7 @@ const App = () => (
     <NavContainer />
     <Modal />
     <Home />
+    <Footer />
   </div>
 );
 
