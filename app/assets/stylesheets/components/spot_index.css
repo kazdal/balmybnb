@@ -1,0 +1,40 @@
+.spot-index-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  color: #484848;
+}
+
+.spot-index-left-items {
+  width: 66.66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spot-index-left-items > ul {
+  display: flex;
+  width: 100%;
+}
+
+.spot-index-left-items > h1 {
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.spot-index-right-map {
+  width: 33.33%;
+  height: 70vh;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spot-index-item {
+  width: 33.33%;
+  height: 375px;
+}
