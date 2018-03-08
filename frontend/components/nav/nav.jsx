@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -75,7 +76,9 @@ export default class Nav extends React.Component {
 
     return (
       <header className="nav-bar">
-        <i className="fas fa-sun"></i>
+        <Link to="/">
+          <i className="fas fa-sun"></i>
+        </Link>
           { this.props.currentUser ?
             this.signedInNav() :
             this.signedOutNav()
