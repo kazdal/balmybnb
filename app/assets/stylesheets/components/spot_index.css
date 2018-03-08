@@ -1,7 +1,7 @@
 .spot-index-main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 25px;
   color: #484848;
 }
@@ -9,20 +9,28 @@
 .spot-index-left-items {
   width: 66.66%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
 }
 
 .spot-index-left-items > ul {
+  flex-wrap: wrap;
   display: flex;
   width: 100%;
+  margin-top: 25px;
 }
 
-.spot-index-left-items > h1 {
+.spot-index-header > h1 {
   margin-right: auto;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
+}
+
+.spot-index-header > p {
+  font-weight: lighter;
+  font-size: 19px;
+  margin-top: 10px;
 }
 
 .spot-index-right-map {
@@ -32,9 +40,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 25px;
 }
 
 .spot-index-item {
   width: 33.33%;
   height: 375px;
+  max-height: 400px;
+  max-width: 390px;
+  margin: 0 8px;
+}
+
+.spot-index-item:first-child {
+  margin-left: 0;
+}
+
+.spot-index-item:last-child {
+  margin-right: 0;
+}
+
+.spot-index-item > h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+.spot-index-item > p:first-of-type {
+  font-weight: lighter;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.delete-this {
+  background-color: lightgreen;
+  width: 100%;
+  height: 66.66%;
+  border-radius: 5px;
 }
