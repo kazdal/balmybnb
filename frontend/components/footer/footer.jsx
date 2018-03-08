@@ -21,10 +21,10 @@ export default class Footer extends React.Component {
               <img src={window.staticImages.mainLogo}></img>
             </li>
             <li>
-              <a href="https://www.github.com/dkvng"><i class="fab fa-github"></i></a>
+              <a href="https://www.github.com/dkvng"><i className="fab fa-github"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/dakang"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/dakang"><i className="fab fa-linkedin-in"></i></a>
             </li>
           </ul>
         </section>
