@@ -10,7 +10,6 @@ export default class SpotShow extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <section className="spot-show-section">
         <div className="spot-show-slider"></div>

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    get 'spot_images/show'
+  end
+
+  namespace :api do
+    get 'spot_images/create'
+  end
+
   root to: "static_pages#root"
 
   namespace :api, defaults: {format: :json} do
