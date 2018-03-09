@@ -21,6 +21,18 @@
   margin-top: 25px;
 }
 
+/* idk about this one */
+.spot-index-left-items ul a {
+    color: inherit;
+    font-style: normal;
+    text-decoration: none;
+    width: 31.33%;
+    /* height: 375px; */
+    max-height: 400px;
+    max-width: 390px;
+    margin: 0 8px;
+}
+
 .spot-index-header > h1 {
   margin-right: auto;
   font-size: 28px;
@@ -44,11 +56,11 @@
 }
 
 .spot-index-item {
-  width: 33.33%;
+  /* width: 33.33%; */
   height: 375px;
-  max-height: 400px;
+  /* max-height: 400px;
   max-width: 390px;
-  margin: 0 8px;
+  margin: 0 8px; */
 }
 
 .spot-index-item:first-child {
