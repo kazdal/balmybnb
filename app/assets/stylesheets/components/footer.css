@@ -27,7 +27,7 @@
 }
 
 .page-footer section .footer-right li {
-  margin: 0 5px;
+  margin: 0 8px;
   font-size: 14px;
 }
 
@@ -49,6 +49,6 @@
 }
 
 .page-footer section .footer-right img {
-  height: 90px;
-  margin: -25px -10px -25px -5px;
+  height: 80px;
+  margin: -25px -19px -25px -8px;
 }

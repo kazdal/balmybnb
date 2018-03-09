@@ -1,0 +1,35 @@
+.spot-show-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #484848;
+}
+
+.spot-show-slider {
+  height: 510px;
+  width: 100%;
+  background-color: lightyellow;
+}
+
+.spot-show-main {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.spot-show-header {
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 1.35em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.spot-show-main {
+  font-size: 17.5px;
+  font-weight: lighter;
+  line-height: 1.4em;
+}
