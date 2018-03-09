@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, HashRouter } from 'react-router-dom';
+import { Route, Link, HashRouter, Switch } from 'react-router-dom';
 
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
@@ -15,7 +15,10 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <NavContainer />
+    <Switch>
+      <Route exact path="/" component={NavContainer} />
+      <Route exact path="/spots" component={NavContainer} />
+    </Switch>
     <Modal />
 
     <Route exact path="/" component={Home} />
