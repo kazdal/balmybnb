@@ -76,3 +76,14 @@
   align-items: center;
   flex-direction: column;
 }
+
+.home-search-bar {
+  width: 116%;
+  outline: none;
+  height: 70px;
+  border: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(156,160,171,0.25);
+}

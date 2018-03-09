@@ -15,6 +15,7 @@ export default class Home extends React.Component {
           <main>
             <p>Book unique homes and</p>
             <p>experiences all over the world.</p>
+              <input type="text" placeholder="Try 'Los Angeles'" className="home-search-bar" />
           </main>
         </section>
 
