@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
-    // this.addActiveClass = this.addActiveClass.bind(this);
     this.state = {
       active: false
     };
@@ -72,10 +71,8 @@ export default class Nav extends React.Component {
   }
 
   render() {
-
-
     return (
-      <header className="nav-bar">
+      <header className={(this.props.match.path ==="/spots") ? "nav-bar spot-index-nav-bar" : "nav-bar"}>
         <Link to="/">
           <i className="fas fa-sun"></i>
         </Link>

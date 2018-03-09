@@ -3,9 +3,9 @@ import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import Nav from './nav';
 
-const msp = state => {
+const msp = (state, ownProps) => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
   };
 };
 
