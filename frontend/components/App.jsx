@@ -9,6 +9,7 @@ import Modal from './modal/modal';
 import Home from './home/home';
 import Footer from './footer/footer';
 import SpotIndexContainer from './spot_index/spot_index_container';
+import SpotShowContainer from './spot_show/spot_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -19,6 +20,7 @@ const App = () => (
 
     <Route exact path="/" component={Home} />
     <Route exact path="/spots" component={SpotIndexContainer} />
+    <Route exact path="/spots/:spotId" component={SpotShowContainer} />
     <Footer />
   </div>
 );

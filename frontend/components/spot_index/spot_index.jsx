@@ -28,7 +28,7 @@ export default class SpotIndex extends React.Component {
         </section>
 
         <section className="spot-index-right-map">
-          THIS A MAP
+          NO MAP
         </section>
 
       </main>
