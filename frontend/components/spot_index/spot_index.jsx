@@ -1,5 +1,6 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
+import { Link } from 'react-router-dom';
 
 export default class SpotIndex extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export default class SpotIndex extends React.Component {
 
   render() {
     const allSpots = this.props.spots.map((spot) => {
-        return <SpotIndexItem key={ spot.id } spot={ spot }></SpotIndexItem>;
+        return <Link to={`/spots/${spot.id}`}><SpotIndexItem key={ spot.id } spot={ spot }></SpotIndexItem></Link>;
     });
     return (
       <main className="spot-index-main">
