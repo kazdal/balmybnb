@@ -3,5 +3,5 @@ class Spot < ApplicationRecord
   validates :location, uniqueness: true
 
   # has_many :spot_images
-  # belongs_to :user
+  belongs_to :user
 end
