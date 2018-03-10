@@ -6,6 +6,10 @@ class Api::SpotImagesController < ApplicationController
     @spot_image = SpotImage.find(params[:id])
   end
 
+  def index
+    @spot_images = SpotImage.all
+  end
+
   def create
     @spot_image = SpotImage.new(spot_image_params)
 
