@@ -3,6 +3,7 @@ import React from 'react';
 
 import SpotShow from './spot_show';
 import { fetchSpot } from '../../actions/spot_actions';
+import { fetchSpotImages } from '../../actions/spot_image_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -12,7 +13,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchSpot: (id) => dispatch(fetchSpot(id))
+    fetchSpot: (id) => dispatch(fetchSpot(id)),
+    fetchSpotImages: () => dispatch(fetchSpotImages())
   };
 };
 

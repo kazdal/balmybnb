@@ -16,8 +16,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/" component={NavContainer} />
       <Route exact path="/spots" component={NavContainer} />
+      <Route path="/" component={NavContainer} />
     </Switch>
     <Modal />
 

@@ -15,6 +15,7 @@ export const fetchSpotImage = id => (
 export const createSpotImage = spot_image => (
   $.ajax({
     method: 'POST',
-    url: 'api/spot_images'
+    url: 'api/spot_images',
+    data: { spot_image }
   })
 );
