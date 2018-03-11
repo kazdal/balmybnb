@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Slider from 'react-slick';
+
 
 class SpotIndexItem extends React.Component {
   constructor(props) {
@@ -10,14 +12,38 @@ class SpotIndexItem extends React.Component {
   handleClick() {
   // const spotId = this.props.spot.id;
   // this.props.history.push(`/spots/${spotId}`);
-}
+  }
+
+  slickSlider() {
+    let slickSettings = {
+      dots: true,
+      infinite: true,
+      speed: 0,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
+    const slides = this.props.spot.spotImageIds.map((spot_image, idx) => {
+        return (
+          <div key={idx} className="slide-wrapper">
+            <img src={this.props.spotImages[spot_image].image_url}></img>
+          </div>
+        );
+    });
+    return (
+      <Slider {...slickSettings}>
+        { slides }
+        <div className="slide-wrapper"></div>
+      </Slider>
+    );
+  }
 
   render() {
     const { title, description, price, location } = this.props.spot;
 
     return (
       <li className="spot-index-item" onClick={this.handleClick}>
-        <div className="delete-this THISISAN-IMAGEPLACEHOLDER"></div>
+        { this.slickSlider() }
         <h2>
           { title }
         </h2>

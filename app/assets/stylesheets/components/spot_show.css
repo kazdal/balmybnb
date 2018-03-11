@@ -10,6 +10,7 @@
   height: 510px;
   width: 100%;
   background-color: #F1A9A0;
+  object-fit: cover;
 }
 
 .spot-show-main {

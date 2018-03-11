@@ -12,7 +12,8 @@ export default class SpotShow extends React.Component {
   render() {
     return (
       <section className="spot-show-section">
-        <div className="spot-show-slider"></div>
+        <img src={this.props.spot_images[11].image_url} className="spot-show-slider"></img>
+
         <section className="spot-show-main">
             <h1 className="spot-show-header">{this.props.spot.title}</h1>
             <p>{this.props.spot.description}</p>

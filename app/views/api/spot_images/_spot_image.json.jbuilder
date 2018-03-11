@@ -1,1 +1,1 @@
-json.extract! spot_image, :id, :image_url, :spot_id
+json.extract! spot_image, :id, :spot_id, :image_url
