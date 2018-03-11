@@ -13,6 +13,8 @@ import SpotShowContainer from './spot_show/spot_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import 'react-dates/initialize';
+
 const App = () => (
   <div>
     <Switch>

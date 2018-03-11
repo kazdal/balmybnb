@@ -22,3 +22,7 @@
   input:focus {
   outline-offset: 0;
   }
+
+  *, *:before, *:after {
+      box-sizing: border-box;
+  }
