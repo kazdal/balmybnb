@@ -109,12 +109,12 @@
 
 /* slick-react styling */
 .slick-arrow.slick-next {
-  right: 5%;
+  right: 0;
 }
 
 .slick-arrow.slick-prev {
-  left: 5%;
   z-index: 1;
+  left: 0;
 }
 
 .slick-dots {
@@ -127,6 +127,11 @@
   height: 250px;
   border-radius: 5px;
   object-fit: cover;
+}
+
+.slick-arrow {
+  height: 100%;
+  width: 15%;
 }
 
 .slide-wrapper > img {
