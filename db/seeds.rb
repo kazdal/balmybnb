@@ -14,13 +14,16 @@
   Spot.create(title: '180-Degree Ocean View in Paradise West Malibu', description: 'Directly above the see on a hilltop of its own there is a Shangri-La where the sun rises and sets and the ocean meets the sky. It is only a short walk down to Nicholas Canyon Beach but here you are in another world. This contemporary Mediterranean home has breathtaking views of the sea and mountains yet the best beaches, restaurants and shops are within minutes driving distance.
   Cypress Cove is less than a mile drive and Pepperdine and Camarillo Premium Outlets are a 20 minute drive.', price: 250, location: '300000 Pacific Coast Hwy, Malibu, CA 90265-3601')
 
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
-  Spot.create(title: Faker::Address.community, description: Faker::Hipster.sentence(9), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
+  Spot.create(title: Faker::Address.community, description: Faker::Hipster.paragraph(3), price: Faker::Number.number(3), location: Faker::Address.street_address)
 
 
   Spot.create(title: 'test', description: 'testing', price: 250, location: '3s00000 Pacific Coast Hwy, Malibu, CA 90265-3601')
+
+  Booking.delete_all
+  Booking.create(start_date: '12-06-2018', end_date: '19-06-2018', user_id: User.first.id, spot_id: Spot.first.id)
