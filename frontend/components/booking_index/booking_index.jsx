@@ -7,7 +7,6 @@ export default class BookingIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBookings();
     this.props.fetchSpots();
   }
 

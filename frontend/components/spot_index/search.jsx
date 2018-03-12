@@ -10,7 +10,10 @@ const Search = ({ spots, spotImages, fetchSpots, fetchSpotImages }) => (
       fetchSpots = { fetchSpots }
       fetchSpotImages = { fetchSpotImages }
       />
-    <SpotMap />
+    <SpotMap
+      spots = { spots }
+      fetchSpots = { fetchSpots }
+      />
   </section>
 );
 

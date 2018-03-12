@@ -4,6 +4,8 @@ json.spot do
   json.spotImageIds @spot.spot_images.pluck(:id)
 end
 
+
+
 # json.spot_images do
 #   @spot.spot_images.each do |spot_image|
 #     json.set! spot_image.id do

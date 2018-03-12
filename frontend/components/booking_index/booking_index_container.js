@@ -13,7 +13,6 @@ const msp = state => {
 };
 
 const mdp = dispatch => ({
-  fetchBookings: bookings => dispatch(fetchBookings(bookings)),
   fetchSpots: spots => dispatch(fetchSpots(spots))
 });
 
