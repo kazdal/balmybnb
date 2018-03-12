@@ -1,4 +1,6 @@
 import React from 'react';
+import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 export default class SpotIndexItem extends React.Component {
   constructor(props) {
@@ -7,9 +9,21 @@ export default class SpotIndexItem extends React.Component {
 
   render() {
 
+    const { booking, spot } = this.props;
+
     return (
       <li className="booking-index-item">
-        swag
+        <Link to={`/spots/${spot.id}`}>
+          <img className="booking-item-img"></img>
+        </Link>
+
+      <div className="booking-index-item-text">
+        <h1>Quincy</h1>
+        <p>{ moment(booking.start_date).format("MMM Do")  } - { moment(booking.end_date).format("MMM Do YYYY")  }</p>
+        <Link to={`/spots/${spot.id}`}>
+          <p>{ spot.title }</p>
+        </Link>
+      </div>
       </li>
     );
   }

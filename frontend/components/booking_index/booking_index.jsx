@@ -8,21 +8,24 @@ export default class BookingIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchBookings();
+    this.props.fetchSpots();
   }
 
   render() {
     const allBookings = this.props.bookings.map((booking) => {
       if (booking.user_id === this.props.currentUserId) {
-        return <BookingIndexItem key={ booking.id } booking={ booking }></BookingIndexItem>;
+        return <BookingIndexItem key={ booking.id } booking={ booking } spot={this.props.spots[booking.spot_id] || ""}></BookingIndexItem>;
       }
     });
 
     return (
       <section className="booking-index-section">
-        <h1>Trips</h1>
-        <ul className="booking-index-items">
-          { allBookings }
-        </ul>
+        <section className="booking-index-inner">
+          <h1>Trips</h1>
+          <ul className="booking-index-items">
+            { allBookings }
+          </ul>
+        </section>
       </section>
     );
   }
