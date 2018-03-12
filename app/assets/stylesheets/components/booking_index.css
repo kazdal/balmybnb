@@ -55,14 +55,17 @@
 .booking-index-item-text > a {
   color: #484848;
   text-decoration: none;
+  text-align: center;
 }
 
 .booking-index-item-text p {
   margin: 5px 0;
+  line-height: 1.4em;
 }
 
 .booking-index-item-text > h1 {
   margin: 5px 0;
   margin-top: 15px;
   font-size: 30px;
+  text-align: center;
 }

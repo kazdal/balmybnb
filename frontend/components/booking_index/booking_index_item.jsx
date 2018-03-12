@@ -18,7 +18,7 @@ export default class SpotIndexItem extends React.Component {
         </Link>
 
       <div className="booking-index-item-text">
-        <h1>Quincy</h1>
+        <h1>{ spot.title }</h1>
         <p>{ moment(booking.start_date).format("MMM Do")  } - { moment(booking.end_date).format("MMM Do YYYY")  }</p>
         <Link to={`/spots/${spot.id}`}>
           <p>{ spot.title }</p>
