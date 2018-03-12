@@ -1,15 +1,14 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import SpotIndex from './spot_index';
+import Search from './search';
 import { fetchSpots } from '../../actions/spot_actions';
 import { fetchSpotImages } from '../../actions/spot_image_actions';
 
 const msp = state => {
   return {
     spots: Object.assign([], state.entities.spots),
-    spotImages: Object.assign([], state.entities.spot_images)
+    spot_images: Object.assign([], state.entities.spot_images)
   };
 };
 
@@ -20,4 +19,4 @@ const mdp = dispatch => {
   };
 };
 
-export default connect(msp, mdp)(SpotIndex);
+export default connect(msp, mdp)(Search);

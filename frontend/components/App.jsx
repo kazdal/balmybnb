@@ -8,13 +8,15 @@ import Modal from './modal/modal';
 
 import Home from './home/home';
 import Footer from './footer/footer';
-import SpotIndexContainer from './spot_index/spot_index_container';
 import SpotShowContainer from './spot_show/spot_show_container';
 import BookingIndexContainer from './booking_index/booking_index_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import 'react-dates/initialize';
+
+import SpotIndexContainer from './spot_index/spot_index_container';
+import SearchContainer from './spot_index/search_container';
 
 const App = () => (
   <div>
@@ -26,7 +28,7 @@ const App = () => (
 
     <Route exact path="/" component={Home} />
     <Route exact path="/bookings" component={BookingIndexContainer} />
-    <Route exact path="/spots" component={SpotIndexContainer} />
+    <Route exact path="/spots" component={SearchContainer} />
     <Route exact path="/spots/:spotId" component={SpotShowContainer} />
     <Footer />
   </div>
