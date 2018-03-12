@@ -21,12 +21,15 @@ export const fetchBookings = () => dispatch => (
 
 export const fetchBooking = (id) => dispatch => (
   APIUtil.fetchBooking(id).then(payload => (
-    dispatch(receiveAllBookings(payload))
+    dispatch(receiveBooking(payload))
   ))
 );
 
-export const createBooking = (booking) => dispatch => (
-  APIUtil.fetchBooking(booking).then(booking => (
-    dispatch(receiveAllBookings(booking))
-  ))
-);
+export const createBooking = (booking) => dispatch => {
+  debugger
+  return (
+    APIUtil.fetchBooking(booking).then(booking => (
+      dispatch(receiveBooking(booking))
+    ))
+  );
+};

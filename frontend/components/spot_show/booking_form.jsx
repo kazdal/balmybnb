@@ -14,6 +14,7 @@ export default class BookingForm extends React.Component {
       focusedInput: null,
       guests: ''
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -24,32 +25,42 @@ export default class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createBooking(this.state);
+    let booking = {
+      start_date: this.state.startDate._d,
+      end_date: this.state.endDate._d,
+      spot_id: this.props.spot.id,
+      user_id: this.props.currentUserId
+    };
+    debugger
+    this.props.createBooking(booking);
   }
 
 
 
   render() {
-
     return (
       <section className="booking-form-container">
-        <p><span>$NUMBER</span>per night</p>
+        <p className="booking-form-p"><span>${this.props.spot.price}</span> per night</p>
         <div className="form-line"></div>
-        <form className="booking-form">
+        <form onSubmit={this.handleSubmit} className="booking-form">
           <label>Dates</label>
+
             <DateRangePicker
               startDate={this.state.startDate}
-              startDateId="your_unique_start_date_id"
+              startDateId="startDate"
               endDate={this.state.endDate}
-              endDateId="your_unique_end_date_id"
+              endDateId="endDate"
               onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
               focusedInput={this.state.focusedInput}
               onFocusChange={focusedInput => this.setState({ focusedInput })}
+              startDatePlaceholderText="Check In"
+              endDatePlaceholderText="Check Out"
               />
+
           <label>Guests</label>
-            <input className="booking-form-input"></input>
+            <select className="booking-form-input"></select>
 
-
+            <input className="booking-submit" type="submit" value="Book" />
         </form>
       </section>
     );

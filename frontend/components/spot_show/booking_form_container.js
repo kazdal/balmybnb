@@ -4,9 +4,8 @@ import { createBooking } from '../../actions/booking_actions';
 import BookingForm from './booking_form';
 
 const msp = state => {
-  debugger
   return {
-
+    currentUserId: state.session.currentUser.id
   };
 };
 const mdp = dispatch => ({
