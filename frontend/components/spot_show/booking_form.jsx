@@ -31,7 +31,6 @@ export default class BookingForm extends React.Component {
       spot_id: this.props.spot.id,
       user_id: this.props.currentUserId
     };
-    debugger
     this.props.createBooking(booking);
   }
 

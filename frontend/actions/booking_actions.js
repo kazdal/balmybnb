@@ -26,9 +26,8 @@ export const fetchBooking = (id) => dispatch => (
 );
 
 export const createBooking = (booking) => dispatch => {
-  debugger
   return (
-    APIUtil.fetchBooking(booking).then(booking => (
+    APIUtil.createBooking(booking).then(booking => (
       dispatch(receiveBooking(booking))
     ))
   );
