@@ -16,12 +16,18 @@
 }
 
 .nav-bar .nav-items > li {
-  padding: 33px 12px;
+  padding: 33px 0px;
   margin: 0 5px;
   color: #484848;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 1.85px solid transparent;
+}
+
+.nav-bar .nav-items > li > a {
+  padding: 33px 12px;
+  text-decoration: none;
+  color: #484848;
 }
 
 .nav-bar .nav-items > li:last-child {
