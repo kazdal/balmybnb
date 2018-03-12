@@ -39,7 +39,7 @@ export default class Nav extends React.Component {
         <ul className="nav-items">
           <li><a>Become a host</a></li>
           <li><a>Saved</a></li>
-          <li><a>Trips</a></li>
+          <li><Link to="/bookings">Trips</Link></li>
           <li><a>Help</a></li>
           <li className="nav-pic-container" onClick={() => this.toggleClass()}><a><img className="nav-picture" alt="Profile picture" src="https://a0.muscache.com/im/pictures/41b239ba-1b29-488c-9e84-828d0d5e0073.jpg?aki_policy=profile_small" />
             {this.userDropdown()}
