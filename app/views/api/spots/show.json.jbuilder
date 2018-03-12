@@ -6,13 +6,13 @@ end
 
 
 
-# json.spot_images do
-#   @spot.spot_images.each do |spot_image|
-#     json.set! spot_image.id do
-#       json.partial! 'api/spot_image/spot_image', spot_image: spot_image
-#     end
-#   end
-# end
+json.spot_images do
+  @spot.spot_images.each do |spot_image|
+    json.set! spot_image.id do
+      json.partial! 'api/spot_image/spot_image', spot_image: spot_image
+    end
+  end
+end
 
 # json.reviews do
 #   @spot.reviews.each do |review|
