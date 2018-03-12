@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: flex-start;
   margin: 25px;
+  margin-top: 105px;
   color: #484848;
 }
 
@@ -96,9 +97,6 @@
 
 
 /* classes to apply for fixed nav-bar when on spots page */
-.spot-index-main {
-  padding-top: 80px;
-}
 
 .spot-index-nav-bar {
   position: fixed;

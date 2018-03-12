@@ -25,15 +25,40 @@ export default class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let booking = {
-      start_date: this.state.startDate._d,
-      end_date: this.state.endDate._d,
-      spot_id: this.props.spot.id,
-      user_id: this.props.currentUserId
-    };
+    let booking;
+    if (this.state.startDate && this.state.endDate) {
+      booking = {
+        start_date: this.state.startDate._d,
+        end_date: this.state.endDate._d,
+        spot_id: this.props.spot.id,
+        user_id: this.props.currentUserId
+      };
+    }
     this.props.createBooking(booking);
   }
 
+  componentDidMount() {
+    this.props.fetchBookings();
+  }
+
+  isDayBooked() {
+    let dates = [];
+    this.props.bookings.forEach((booking) => {
+      dates = dates.concat(this.getDates(booking.start_date, booking.end_date));
+    });
+    return dates;
+  }
+
+  getDates(startDate, endDate) {
+    let dateArray = [];
+    let currentDate = moment(startDate);
+    let stopDate = moment(endDate);
+    while (currentDate <= stopDate) {
+      dateArray.push(moment(currentDate).format('YYYY-MM-DD'));
+        currentDate = moment(currentDate).add(1, 'days');
+    }
+    return dateArray;
+  }
 
 
   render() {
@@ -54,6 +79,7 @@ export default class BookingForm extends React.Component {
               onFocusChange={focusedInput => this.setState({ focusedInput })}
               startDatePlaceholderText="Check In"
               endDatePlaceholderText="Check Out"
+              isDayBlocked={day => this.isDayBooked().includes(moment(day).format('YYYY-MM-DD'))}
               />
 
           <label>Guests</label>
