@@ -16,7 +16,7 @@ export default class SpotShow extends React.Component {
       <section className="spot-show-section">
 
         {
-          this.props.spot_images !== undefined &&
+          this.props.spot_images === {} &&
           <img src={this.props.spot_images[11].image_url} className="spot-show-slider"></img>
         }
 
