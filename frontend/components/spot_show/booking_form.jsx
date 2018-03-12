@@ -44,7 +44,9 @@ export default class BookingForm extends React.Component {
   isDayBooked() {
     let dates = [];
     this.props.bookings.forEach((booking) => {
-      dates = dates.concat(this.getDates(booking.start_date, booking.end_date));
+      if (booking.spot_id === this.props.spot.id) {
+        dates = dates.concat(this.getDates(booking.start_date, booking.end_date));
+      }
     });
     return dates;
   }
