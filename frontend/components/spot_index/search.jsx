@@ -3,7 +3,7 @@ import SpotMap from './spot_map';
 import SpotIndex from './spot_index';
 
 const Search = ({ spots, spotImages, fetchSpots, fetchSpotImages }) => (
-  <section>
+  <section className="spot-index-main">
     <SpotIndex
       spots = { spots }
       spotImages = { spotImages }

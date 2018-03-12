@@ -21,7 +21,6 @@ export default class SpotIndex extends React.Component {
     const spotCount = this.props.spots.filter(obj => obj !== undefined).length;
 
     return (
-      <main className="spot-index-main">
         <section className="spot-index-left-items">
           <div className="spot-index-header">
             <h1><CountUp useEasing={true} start={0} end={spotCount} duration={2.5} /> balmybnb homes in Los Angeles</h1>
@@ -31,16 +30,6 @@ export default class SpotIndex extends React.Component {
             { allSpots }
           </ul>
         </section>
-
-        <section className="spot-index-right-map-section">
-          <div className="spot-index-right-map">
-            <div>
-              NO MAP
-            </div>
-          </div>
-        </section>
-
-      </main>
     );
   }
 }

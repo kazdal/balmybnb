@@ -6,9 +6,9 @@ export default class SpotMap extends React.Component {
   }
 
   componentDidMount() {
-    // set the map to show SF
+    // set map location
     const mapOptions = {
-      center: { lat: 37.7758, lng: -122.435 }, // this is SF
+      center: { lat: 37.7758, lng: -122.435 },
       zoom: 13
     };
 
@@ -19,7 +19,11 @@ export default class SpotMap extends React.Component {
   render() {
 
     return (
-       <div id='map-container' ref={ map => this.mapNode = map }>ok</div>
+      <section className="spot-index-right-map-section">
+        <div className="spot-index-right-map">
+          <div id='map-container' ref={ map => this.mapNode = map }>ok</div>
+        </div>
+      </section>
     );
   }
 }
