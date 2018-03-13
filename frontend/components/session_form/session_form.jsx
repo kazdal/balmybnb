@@ -119,7 +119,7 @@ class SessionForm extends React.Component {
     return (
       <div className="modal" onClick={this.props.closeModal}>
         <div className="login-form-container" onClick={e => e.stopPropagation()}>
-          <div onClick={this.props.closeModal} className="close-x"><i class="material-icons">close</i></div>
+          <div onClick={this.props.closeModal} className="close-x"><i className="material-icons">close</i></div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
             {this.renderErrors()}

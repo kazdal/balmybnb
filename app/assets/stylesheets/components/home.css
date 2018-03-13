@@ -32,9 +32,9 @@
   height: 75px;
   border: 1px solid #DBDBDB;
   display: flex;
-  border-radius: 2px;
+  overflow: hidden;
+  border-radius: 3px;
   color: #484848;
-
 }
 
 .home-explore-section > ul > a > li {
