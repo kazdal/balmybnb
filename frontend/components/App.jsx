@@ -27,7 +27,7 @@ const App = () => (
     <Modal />
 
     <Route exact path="/" component={Home} />
-    <AuthRoute exact path="/bookings" component={BookingIndexContainer} />
+    <ProtectedRoute exact path="/bookings" component={BookingIndexContainer} />
     <Route exact path="/spots" component={SearchContainer} />
     <Route exact path="/spots/:spotId" component={SpotShowContainer} />
     <Footer />

@@ -21,10 +21,11 @@ export default class MarkerManager {
     const mapIcon = {
           path: 'M22-48h-44v43h16l6 5 6-5h16z',
           fillColor: 'white',
-          fillOpacity: 0.8,
+          fillOpacity: 1,
           scale: 1,
           strokeColor: 'white',
-          strokeWeight: 1
+          labelOrigin: new google.maps.Point(0, -25),
+          strokeWeight: 0
         };
 
     this.markers[spot.id] =
