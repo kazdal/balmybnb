@@ -18,15 +18,23 @@ export default class MarkerManager {
   }
 
   createMarkerFromSpot(spot) {
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    const mapIcon = {
+          path: 'M22-48h-44v43h16l6 5 6-5h16z',
+          fillColor: 'white',
+          fillOpacity: 0.8,
+          scale: 1,
+          strokeColor: 'white',
+          strokeWeight: 1
+        };
+
     this.markers[spot.id] =
       new google.maps.Marker({
         position: {lat: spot.lat, lng: spot.lng},
         map: this.map,
         title: spot.description,
-        animation: google.maps.Animation.DROP,
         spotId: spot.id,
-        label: String(spot.price)
+        label: "$" + String(spot.price),
+        icon: mapIcon
       });
     let marker = this.markers[spot.id];
     marker.setMap(this.map);
