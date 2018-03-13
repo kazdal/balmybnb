@@ -5,15 +5,16 @@ export default class MarkerManager {
   }
 
   updateMarkers(spots) {
-    console.log('time to update');
-    spots.forEach((spot) => {
-      if (this.markers.keys === undefined) {
-        this.createMarkerFromSpot(spot);
-      } else if (!this.markers.keys.includes(spot.id)) {
-        this.createMarkerFromSpot(spot);
-      }
+    const spotsObj = {};
+    spots.forEach(spot => spotsObj[spot.id] = spot);
 
-    });
+    spots
+      .filter(spot => !this.markers[spot.id])
+      .forEach(newSpot => this.createMarkerFromSpot(newSpot));
+
+    Object.keys(this.markers)
+      .filter(spotId => !spotsObj[spotId])
+      .forEach((spotId) => this.removeMarker(this.markers[spotId]));
   }
 
   createMarkerFromSpot(spot) {
@@ -24,9 +25,15 @@ export default class MarkerManager {
         map: this.map,
         title: spot.description,
         animation: google.maps.Animation.DROP,
-        icon: image
+        icon: image,
+        spotId: spot.id
       });
-      let marker = this.markers[spot.id];
-      marker.setMap(this.map);
+    let marker = this.markers[spot.id];
+    marker.setMap(this.map);
+  }
+
+  removeMarker(marker) {
+    this.markers[marker.spotId].setMap(null);
+    delete this.markers[marker.spotId];
   }
 }

@@ -1,10 +1,10 @@
-export const fetchSpots = () => (
-  $.ajax({
+export const fetchSpots = (data) => {
+  return $.ajax({
     method: 'GET',
     url: 'api/spots',
-    filters: bounds
-  })
-);
+    data
+  });
+};
 
 export const fetchSpot = id => (
   $.ajax({

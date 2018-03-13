@@ -2,7 +2,7 @@ import React from 'react';
 import SpotMap from './spot_map';
 import SpotIndex from './spot_index';
 
-const Search = ({ spots, spotImages, fetchSpots, fetchSpotImages }) => (
+const Search = ({ spots, spotImages, fetchSpots, fetchSpotImages, updateFilter }) => (
   <section className="spot-index-main">
     <SpotIndex
       spots = { spots }
@@ -13,6 +13,7 @@ const Search = ({ spots, spotImages, fetchSpots, fetchSpotImages }) => (
     <SpotMap
       spots = { spots }
       fetchSpots = { fetchSpots }
+      updateFilter = { updateFilter }
       />
   </section>
 );

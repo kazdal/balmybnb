@@ -7,21 +7,9 @@ class Spot < ApplicationRecord
   # belongs_to :user
 
   def self.in_bounds(bounds)
-    # {
-    #   "northEast"=> {"lat"=>"37.80971", "lng"=>"-122.39208"},
-    #   "southWest"=> {"lat"=>"37.74187", "lng"=>"-122.47791"}
-    # }
-    bound_benches = []
-    Bench.all.each do |bench|
-      if (
-        bench.lat <= bounds["northEast"][lat]
-        && bench.lat >= bounds["southWest"][lat]
-        && bench.lng >= bounds["southWest"][lng]
-        && bench.lng <= bounds["northEast"][lng]
-      )
-        bound_benches << bench
-      end
-    end
-    bound_benches
+    self.where("lat < ?", bounds[:northEast][:lat])
+      .where("lat > ?", bounds[:southWest][:lat])
+      .where("lng > ?", bounds[:southWest][:lng])
+      .where("lng < ?", bounds[:northEast][:lng])
   end
 end
