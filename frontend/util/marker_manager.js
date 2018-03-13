@@ -25,8 +25,8 @@ export default class MarkerManager {
         map: this.map,
         title: spot.description,
         animation: google.maps.Animation.DROP,
-        icon: image,
-        spotId: spot.id
+        spotId: spot.id,
+        label: spot.price
       });
     let marker = this.markers[spot.id];
     marker.setMap(this.map);
