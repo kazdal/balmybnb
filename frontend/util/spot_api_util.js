@@ -1,7 +1,8 @@
 export const fetchSpots = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/spots'
+    url: 'api/spots',
+    filters: bounds
   })
 );
 

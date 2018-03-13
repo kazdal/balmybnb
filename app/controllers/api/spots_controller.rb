@@ -3,7 +3,7 @@ class Api::SpotsController < ApplicationController
   before_action :require_login, only: [:create]
 
   def index
-    @spots = Spot.all
+    @spots = Spot.in_bounds(params[:bounds])
   end
 
   def show
@@ -23,6 +23,6 @@ class Api::SpotsController < ApplicationController
   private
 
   def spot_params
-    params.require(:spot).permit(:title, :description, :price, :location)
+    params.require(:spot).permit(:title, :description, :price, :lat, :lng)
   end
 end

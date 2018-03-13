@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   has_many :spots
   # has_many :reviews
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   after_initialize :ensure_session_token
 
