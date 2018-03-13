@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+
 import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 import omit from 'lodash/omit';
@@ -12,7 +14,8 @@ export default class BookingForm extends React.Component {
       startDate: null,
       endDate: null,
       focusedInput: null,
-      guests: ''
+      guests: '',
+      fireRedirect: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -35,6 +38,7 @@ export default class BookingForm extends React.Component {
       };
     }
     this.props.createBooking(booking);
+    this.setState({ fireRedirect: true });
   }
 
   componentDidMount() {
@@ -89,6 +93,9 @@ export default class BookingForm extends React.Component {
 
             <input className="booking-submit" type="submit" value="Book" />
         </form>
+        {this.state.fireRedirect && (
+          <Redirect to='/bookings'/>
+        )}
       </section>
     );
   }
