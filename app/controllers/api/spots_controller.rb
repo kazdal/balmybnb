@@ -3,7 +3,12 @@ class Api::SpotsController < ApplicationController
   before_action :require_login, only: [:create]
 
   def index
-    @spots = Spot.in_bounds(params[:bounds])
+    @spots = bounds ? Spot.in_bounds(params[:bounds]) : Spot.all
+
+    if params[:minPrice] && params[:maxPrice]
+      @spots = @spots.where(price: price_range)
+    end
+
   end
 
   def show
@@ -22,7 +27,15 @@ class Api::SpotsController < ApplicationController
 
   private
 
+  def price_range
+    (params[:minPrice]..params[:maxPrice])
+  end
+
   def spot_params
     params.require(:spot).permit(:title, :description, :price, :lat, :lng)
+  end
+
+  def bounds
+    params[:bounds]
   end
 end
