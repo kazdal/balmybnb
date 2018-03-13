@@ -9,7 +9,7 @@ class FilterNav extends React.Component {
     return (
       <nav className="filter-nav">
         <ul>
-          <li onClick={ () => this.props.openModal('price') }>Price</li>
+          <button onClick={ () => this.props.openModal('price') }>Price</button>
         </ul>
       </nav>
     );
