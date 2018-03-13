@@ -74,7 +74,7 @@ export default class Nav extends React.Component {
     return (
       <header className={(this.props.match.path ==="/spots") ? "nav-bar spot-index-nav-bar" : "nav-bar"}>
         <Link to="/">
-          <i className="fas fa-sun"></i>
+          <i class="material-icons">wb_sunny</i>
         </Link>
           { this.props.currentUser ?
             this.signedInNav() :

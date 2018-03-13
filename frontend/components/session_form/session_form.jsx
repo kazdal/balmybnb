@@ -119,7 +119,7 @@ class SessionForm extends React.Component {
     return (
       <div className="modal" onClick={this.props.closeModal}>
         <div className="login-form-container" onClick={e => e.stopPropagation()}>
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          <div onClick={this.props.closeModal} className="close-x"><i class="material-icons">close</i></div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
             {this.renderErrors()}
@@ -140,7 +140,7 @@ class SessionForm extends React.Component {
               <input className="session-submit" type="submit" value={this.props.formType} />
 
               { this.props.formType === "Log in" ? <input className="session-submit session-demo-login" type="submit" value="Demo Login" onClick={() => (this.setState({
-                email: 'demo@demo.com', password: '123456'
+                email: 'worldtraveler@onlywarmplaces.com', password: '123456'
               }))} /> : "" }
 
               <div className="form-line"></div>

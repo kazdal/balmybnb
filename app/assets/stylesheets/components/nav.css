@@ -47,7 +47,7 @@
   margin-right: auto;
 }
 
-.nav-bar svg {
+.nav-bar i, .nav-bar svg {
   color: #FC515F;
   font-size: 30px;
   margin-left: 25px;
