@@ -15,7 +15,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import 'react-dates/initialize';
 
-import SpotIndexContainer from './spot_index/spot_index_container';
 import SearchContainer from './spot_index/search_container';
 
 const App = () => (

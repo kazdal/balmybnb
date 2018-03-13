@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import PriceFilterContainer from '../filter/price_filter_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -16,6 +17,9 @@ function Modal({modal, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'price':
+      component = <PriceFilterContainer />;
+      break;
     default:
       return null;
   }
@@ -24,7 +28,7 @@ function Modal({modal, closeModal}) {
     <section>
       { component }
     </section>
-    
+
   );
 }
 

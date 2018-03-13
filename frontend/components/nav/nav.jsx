@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FilterNavContainer from '../filter/filter_nav_container';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -71,17 +72,24 @@ export default class Nav extends React.Component {
   }
 
   render() {
-    return (
-      <header className={(this.props.match.path ==="/spots") ? "nav-bar spot-index-nav-bar" : "nav-bar"}>
-        <Link to="/">
-          <i className="material-icons">wb_sunny</i>
-        </Link>
-          { this.props.currentUser ?
-            this.signedInNav() :
-            this.signedOutNav()
-          }
 
-      </header>
+    const spotsFilter = this.props.match.path === "/spots" ?
+      <FilterNavContainer /> : "";
+
+    return (
+      <div className="spot-index-nav-bar">
+        <header className="nav-bar">
+          <Link to="/">
+            <i className="material-icons">wb_sunny</i>
+          </Link>
+            { this.props.currentUser ?
+              this.signedInNav() :
+              this.signedOutNav()
+            }
+
+        </header>
+        { spotsFilter }
+      </div>
     );
   }
 }
