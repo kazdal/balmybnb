@@ -12,7 +12,8 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
-  updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+  updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
+  closeModal: () => dispatch(closeModal())
 });
 
 export default connect(msp, mdp)(PriceFilter);

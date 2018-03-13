@@ -12,10 +12,10 @@
 
   Spot.delete_all
   Spot.create(title: '180-Degree Ocean View in Paradise West Malibu', description: 'Directly above the see on a hilltop of its own there is a Shangri-La where the sun rises and sets and the ocean meets the sky. It is only a short walk down to Nicholas Canyon Beach but here you are in another world. This contemporary Mediterranean home has breathtaking views of the sea and mountains yet the best beaches, restaurants and shops are within minutes driving distance.
-  Cypress Cove is less than a mile drive and Pepperdine and Camarillo Premium Outlets are a 20 minute drive.', price: 250, lat: 33.844337, lng: -118.394661)
+  Cypress Cove is less than a mile drive and Pepperdine and Camarillo Premium Outlets are a 20 minute drive.', price: 150, lat: 33.844337, lng: -118.394661)
 
   Spot.create(title: 'Malibu Getaway', description: 'Amazing Malibu destination', price: 250, lat: 34.019956, lng: -118.824270)
-  Spot.create(title: 'West LA apartment', description: 'Sunny Los Angeles place with great access to other places', price: 250, lat: 34.035061, lng: -118.431662)
+  Spot.create(title: 'West LA apartment', description: 'Sunny Los Angeles place with great access to other places', price: 50, lat: 34.035061, lng: -118.431662)
 
   Booking.delete_all
   Booking.create(start_date: '12-06-2018', end_date: '19-06-2018', user_id: User.first.id, spot_id: Spot.first.id)

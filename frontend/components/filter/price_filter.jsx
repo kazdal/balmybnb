@@ -8,8 +8,8 @@ export default class PriceFilter extends React.Component {
   render() {
 
     return (
-      <div className="modal" onClick={this.props.closeModal}>
-        <div className="login-form-container" onClick={e => e.stopPropagation()}>
+      <div className="white-modal" onClick={this.props.closeModal}>
+        <div className="filter-container" onClick={e => e.stopPropagation()}>
           THIS A PRICE FILTER
         </div>
       </div>

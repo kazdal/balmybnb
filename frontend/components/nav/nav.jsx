@@ -77,7 +77,7 @@ export default class Nav extends React.Component {
       <FilterNavContainer /> : "";
 
     return (
-      <div className="spot-index-nav-bar">
+      <div className={this.props.match.path === "/spots" ? "spot-index-nav-bar" : ""}>
         <header className="nav-bar">
           <Link to="/">
             <i className="material-icons">wb_sunny</i>
