@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 
-import { fetchBookings } from '../../actions/booking_actions';
 import { fetchSpots } from '../../actions/spot_actions';
+import { fetchCurrentUser } from '../../actions/session_actions';
+
 import BookingIndex from './booking_index';
 
 const msp = state => {
@@ -13,7 +14,8 @@ const msp = state => {
 };
 
 const mdp = dispatch => ({
-  fetchSpots: spots => dispatch(fetchSpots(spots))
+  fetchSpots: spots => dispatch(fetchSpots(spots)),
+  fetchCurrentUser: () => dispatch(fetchCurrentUser())
 });
 
 export default connect(msp, mdp)(BookingIndex);

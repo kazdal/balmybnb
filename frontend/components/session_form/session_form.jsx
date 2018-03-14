@@ -115,7 +115,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
     return (
       <div className="modal" onClick={this.props.closeModal}>
         <div className="login-form-container" onClick={e => e.stopPropagation()}>

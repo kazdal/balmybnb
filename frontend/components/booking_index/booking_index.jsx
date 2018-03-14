@@ -8,10 +8,12 @@ export default class BookingIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpots();
+    this.props.fetchCurrentUser();
   }
 
   render() {
     const allBookings = this.props.bookings.map((booking) => {
+      debugger
       if (booking.user_id === this.props.currentUserId) {
         return <BookingIndexItem key={ booking.id } booking={ booking } spot={this.props.spots[booking.spot_id] || ""}></BookingIndexItem>;
       }

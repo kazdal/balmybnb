@@ -9,14 +9,12 @@ const bookingsReducer = (state = {}, action) => {
     case RECEIVE_ALL_BOOKINGS:
       return action.bookings;
     case RECEIVE_BOOKING:
-    debugger
       return merge({}, state, {[action.booking.booking.id]: action.booking.booking});
     case RECEIVE_CURRENT_USER:
       const bookings = action.payload ? action.payload.bookings : null;
       return merge({}, state, bookings);
     case RECEIVE_SPOT:
       const booking = action.payload.bookings;
-      debugger
       return merge({}, state, booking);
     default:
       return state;

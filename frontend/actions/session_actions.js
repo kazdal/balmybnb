@@ -17,6 +17,12 @@ export const receiveErrors = errors => {
   };
 };
 
+export const fetchCurrentUser = () => dispatch => (
+  APIUtil.fetchCurrentUser().then(currentUser => (
+    dispatch(receiveCurrentUser(currentUser))
+  ))
+);
+
 export const signup = user => dispatch => {
   return APIUtil.signup(user).then(user => (
       dispatch(receiveCurrentUser(user))

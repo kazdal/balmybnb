@@ -38,8 +38,8 @@ export default class BookingForm extends React.Component {
       };
     }
     this.props.createBooking(booking).then(
-      this.setState({ fireRedirect: true }),
-      this.setState({ fireRedirect: false })
+      () => this.setState({ fireRedirect: true }),
+      () => this.setState({ fireRedirect: false })
     );
   }
 
