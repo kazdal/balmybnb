@@ -140,12 +140,16 @@
 .filter-container {
   background-color: white;
   width: 390px;
-  height: 280px;
+  height: 150px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 25px;
   color: #484848;
   font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .white-modal {
