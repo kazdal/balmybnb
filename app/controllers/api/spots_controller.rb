@@ -12,7 +12,7 @@ class Api::SpotsController < ApplicationController
   end
 
   def show
-    @spot = Spot.find(params[:id]).includes(:bookings)
+    @spot = Spot.find(params[:id])
   end
 
   def create

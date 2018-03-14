@@ -37,8 +37,10 @@ export default class BookingForm extends React.Component {
         user_id: this.props.currentUserId
       };
     }
-    this.props.createBooking(booking);
-    this.setState({ fireRedirect: true });
+    this.props.createBooking(booking).then(
+      this.setState({ fireRedirect: true }),
+      this.setState({ fireRedirect: false })
+    );
   }
 
   componentDidMount() {
@@ -66,6 +68,17 @@ export default class BookingForm extends React.Component {
     return dateArray;
   }
 
+  renderErrors() {
+    return(
+      <ul className="bookings-errors-list">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     return (
@@ -73,6 +86,9 @@ export default class BookingForm extends React.Component {
         <p className="booking-form-p"><span>${this.props.spot.price}</span> per night</p>
         <div className="form-line"></div>
         <form onSubmit={this.handleSubmit} className="booking-form">
+
+          { this.renderErrors() }
+
           <label>Dates</label>
 
             <DateRangePicker
@@ -93,6 +109,7 @@ export default class BookingForm extends React.Component {
 
             <input className="booking-submit" type="submit" value="Book" />
         </form>
+
         {this.state.fireRedirect && (
           <Redirect to='/bookings'/>
         )}
