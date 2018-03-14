@@ -19,3 +19,10 @@
 
   Booking.delete_all
   Booking.create(start_date: '12-06-2018', end_date: '19-06-2018', user_id: User.first.id, spot_id: Spot.first.id)
+
+  Review.delete_all
+
+  Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 5, spot_id: Spot.first, user_id: User.first)
+  Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 5, spot_id: Spot.first, user_id: User.first)
+  Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 5, spot_id: Spot.first, user_id: User.first)
+  Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 5, spot_id: Spot.first, user_id: User.first)
