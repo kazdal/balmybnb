@@ -14,7 +14,7 @@ export default class BookingForm extends React.Component {
       startDate: null,
       endDate: null,
       focusedInput: null,
-      guests: '',
+      guests: 0,
       fireRedirect: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,10 +41,6 @@ export default class BookingForm extends React.Component {
       this.setState({ fireRedirect: true }),
       this.setState({ fireRedirect: false })
     );
-  }
-
-  componentDidMount() {
-    this.props.fetchBookings();
   }
 
   isDayBooked() {

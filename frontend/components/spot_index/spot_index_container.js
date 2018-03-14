@@ -15,8 +15,8 @@ const msp = state => {
 
 const mdp = dispatch => {
   return {
-    fetchSpots: () => dispatch(fetchSpots()),
-    fetchSpotImages: () => dispatch(fetchSpotImages())
+    // fetchSpots: () => dispatch(fetchSpots()),
+    // fetchSpotImages: () => dispatch(fetchSpotImages())
   };
 };
 

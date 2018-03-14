@@ -8,7 +8,7 @@ export default class SpotShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
-    this.props.fetchSpotImages();
+    // this.props.fetchSpotImages();
   }
 
   render() {

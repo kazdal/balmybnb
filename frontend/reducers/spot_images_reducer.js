@@ -19,14 +19,8 @@ const spotImagesReducer = (state = {}, action) => {
     //     });
     //   });
     //   return merge({}, state, spot_images);
-    // case RECEIVE_SPOT:
-    //   spot_images = [];
-    //   debugger
-    //   action.spot.spot.spotImageIds.forEach((spot_image) => {
-    //     spot_images.push(spot_image);
-    //   });
-    //   return merge({}, state, {[action.spot.spot.id]: spot_images});
-
+    case RECEIVE_SPOT:
+      return merge({}, state, action.payload.spot_images);
     case RECEIVE_ALL_SPOT_IMAGES:
       return action.spot_images;
     default:

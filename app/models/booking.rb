@@ -19,7 +19,7 @@ class Booking < ApplicationRecord
 
   def does_not_overlap_booking
     return if overlapping_requests.empty?
-    errors[:bookings] << 'request conflicts with existing booking'
+    errors[:booking] << 'request conflicts with existing booking'
   end
 
 end
