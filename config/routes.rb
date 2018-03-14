@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :spots, only: [:index, :show, :create]
     resources :spot_images, only: [:index, :show, :create]
     resources :bookings, only: [:index, :show, :create]
+    resources :reviews, only: [:index, :show, :create]
   end
 end
