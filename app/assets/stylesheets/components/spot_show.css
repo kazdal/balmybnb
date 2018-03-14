@@ -35,3 +35,75 @@
   line-height: 1.4em;
   flex-direction: row;
 }
+
+.review-form {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #cacccd;
+  padding: 25px;
+}
+
+.review-form > label {
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.review-form > label > span {
+  font-size: 10px;
+}
+
+.width-35 {
+  width: 35%;
+}
+
+.review-form > label > input, .review-form > label > textarea {
+  font-size: 19px;
+  font-weight: lighter;
+  padding: 11px;
+  margin: 0px 0px 15px;
+  color: rgb(72, 72, 72);
+  outline: transparent 0px;
+  border: 1px solid rgb(219, 219, 219);
+  box-sizing: unset;
+}
+
+.review-form > label > textarea {
+  height: 145px;
+  resize: none;
+}
+
+.flex-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-index-item {
+  min-height: 150px;
+  min-height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.review-index-item > h1 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.review-index-item > p {
+  font-size: 15px;
+}
+
+.review-rating-stars {
+  display: flex;
+  color: #F7CA18;
+}

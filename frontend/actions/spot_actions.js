@@ -19,11 +19,11 @@ export const fetchSpots = (filters) => dispatch => (
   ))
 );
 
-export const fetchSpot = id => dispatch => (
-  APIUtil.fetchSpot(id).then(payload => (
-    dispatch(receiveSpot(payload))
-  ))
-);
+export const fetchSpot = id => dispatch => {
+  return APIUtil.fetchSpot(id).then(payload => {
+    return dispatch(receiveSpot(payload));
+  });
+};
 
 export const createSpot = spot => dispatch => (
   APIUtil.createSpot(spot).then(spot => (

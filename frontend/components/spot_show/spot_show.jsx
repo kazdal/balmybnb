@@ -1,5 +1,7 @@
 import React from 'react';
 import BookingFormContainer from './booking_form_container';
+import ReviewFormContainer from './review_form_container';
+import ReviewIndexItem from './review_index_item'
 
 export default class SpotShow extends React.Component {
   constructor(props) {
@@ -12,6 +14,11 @@ export default class SpotShow extends React.Component {
   }
 
   render() {
+
+    const allReviews = this.props.reviews.map((review) => {
+        return <ReviewIndexItem key={ review.id } review={ review } />;
+      });
+
     return (
       <section className="spot-show-section">
 
@@ -21,11 +28,15 @@ export default class SpotShow extends React.Component {
           : ""
         }
 
-
         <section className="spot-show-main">
           <div className="spot-show-words">
             <h1 className="spot-show-header">{this.props.spot ? this.props.spot.title : ""}</h1>
             <p>{this.props.spot ? this.props.spot.description : ""}</p>
+
+            <ul>
+              { allReviews }
+            </ul>
+            <ReviewFormContainer />
           </div>
           <BookingFormContainer spot={ this.props.spot ? this.props.spot : "" }/>
         </section>

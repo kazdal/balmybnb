@@ -2,6 +2,7 @@ class Spot < ApplicationRecord
   validates :title, :description, :price, :lat, :lng, presence: true
 
   has_many :bookings
+  has_many :reviews
   has_many :spot_images
 
   # belongs_to :user

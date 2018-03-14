@@ -18,7 +18,7 @@ export default class SpotIndex extends React.Component {
     return (
         <section className="spot-index-left-items">
           <div className="spot-index-header">
-            <h1><CountUp useEasing={true} start={0} end={spotCount} duration={2.5} /> balmybnb homes in Los Angeles</h1>
+            <h1><CountUp useEasing={true} start={0} end={spotCount} duration={2} /> balmybnb homes in Los Angeles</h1>
             <p>Explore homes verified for quality & comfort in cities around the world</p>
           </div>
           <ul>
