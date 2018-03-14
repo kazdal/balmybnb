@@ -162,6 +162,26 @@
   align-items: center;
 }
 
+.filter-container > p {
+  font-size: 18px;
+}
+
+.filter-container > a {
+  color: #008489;
+  font-weight: 400;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.filter-container > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+
+
 /* slick-react styling */
 .slick-arrow.slick-next {
   right: 0;
