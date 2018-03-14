@@ -26,6 +26,10 @@ export default class BookingForm extends React.Component {
     });
   }
 
+  componentDidMount() {
+    this.props.clearBookingErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     let booking;

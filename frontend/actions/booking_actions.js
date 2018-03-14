@@ -3,6 +3,7 @@ import * as APIUtil from '../util/booking_api_util';
 export const RECEIVE_ALL_BOOKINGS = 'RECEIVE_ALL_BOOKINGS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
+export const CLEAR_BOOKING_ERRORS = 'CLEAR_BOOKING_ERRORS';
 
 export const receiveAllBookings = bookings => ({
   type: RECEIVE_ALL_BOOKINGS,
@@ -18,6 +19,12 @@ export const receiveErrors = errors => {
   return {
     type: RECEIVE_BOOKING_ERRORS,
     errors
+  };
+};
+
+export const clearBookingErrors = () => {
+  return {
+    type: CLEAR_BOOKING_ERRORS
   };
 };
 

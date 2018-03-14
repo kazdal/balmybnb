@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 
-import { createBooking } from '../../actions/booking_actions';
+import { createBooking, clearBookingErrors } from '../../actions/booking_actions';
 import BookingForm from './booking_form';
+
 
 const msp = state => {
   return {
@@ -11,7 +12,8 @@ const msp = state => {
   };
 };
 const mdp = dispatch => ({
-  createBooking: booking => dispatch(createBooking(booking))
+  createBooking: booking => dispatch(createBooking(booking)),
+  clearBookingErrors: () => dispatch(clearBookingErrors())
 });
 
 export default connect(msp, mdp)(BookingForm);
