@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
+
 import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 import omit from 'lodash/omit';
@@ -32,19 +33,23 @@ export default class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let booking;
-    if (this.state.startDate && this.state.endDate) {
-      booking = {
-        start_date: this.state.startDate._d,
-        end_date: this.state.endDate._d,
-        spot_id: this.props.spot.id,
-        user_id: this.props.currentUserId
-      };
+    if (this.props.currentUser) {
+      let booking;
+      if (this.state.startDate && this.state.endDate) {
+        booking = {
+          start_date: this.state.startDate._d,
+          end_date: this.state.endDate._d,
+          spot_id: this.props.spot.id,
+          user_id: this.props.currentUser.id
+        };
+      }
+      this.props.createBooking(booking).then(
+        () => this.setState({ fireRedirect: true }),
+        () => this.setState({ fireRedirect: false })
+      );
+    } else {
+      this.props.openModal('login');
     }
-    this.props.createBooking(booking).then(
-      () => this.setState({ fireRedirect: true }),
-      () => this.setState({ fireRedirect: false })
-    );
   }
 
   isDayBooked() {
@@ -85,7 +90,7 @@ export default class BookingForm extends React.Component {
       <section className="booking-form-container">
         <p className="booking-form-p"><span>${this.props.spot.price}</span> per night</p>
         <div className="form-line"></div>
-        <form onSubmit={this.handleSubmit} className="booking-form">
+        <form onSubmit={(e) => this.handleSubmit(e)} className="booking-form">
 
           { this.renderErrors() }
 
