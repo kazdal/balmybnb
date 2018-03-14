@@ -45,18 +45,27 @@ class SessionForm extends React.Component {
     );
   }
 
+  openOtherForm() {
+    this.props.otherForm();
+    this.props.clearSessionErrors();
+  }
+
   oppositeAction() {
     if (this.props.formType === 'Sign up') {
       return (
         <p>Already have a balmybnb account?
-          {this.props.otherForm}
+          <a onClick={() => this.openOtherForm()}>
+            Log in
+          </a>
         </p>
       );
     } else {
       return (
         <p>
           Don&#39;t have an account?
-          {this.props.otherForm}
+          <a onClick={() => this.openOtherForm()}>
+            Sign up
+          </a>
         </p>
       );
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FilterNavContainer from '../filter/filter_nav_container';
 
+
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -50,14 +51,19 @@ export default class Nav extends React.Component {
     );
   }
 
+  handleModal(type) {
+    this.props.openModal(type);
+    this.props.clearSessionErrors();
+  }
+
   signedOutNav() {
     return (
       <nav>
         <ul className="nav-items">
           <li><a>Become a host</a></li>
           <li><a>Help</a></li>
-          <li onClick={() => this.props.openModal('signup')}><a>Sign Up</a></li>
-          <li onClick={() => this.props.openModal('login')}><a>Log In</a></li>
+          <li onClick={() => this.handleModal('signup')}><a>Sign Up</a></li>
+          <li onClick={() => this.handleModal('login')}><a>Log In</a></li>
         </ul>
       </nav>
     );
