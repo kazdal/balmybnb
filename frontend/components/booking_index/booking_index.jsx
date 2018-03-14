@@ -12,8 +12,11 @@ export default class BookingIndex extends React.Component {
   }
 
   render() {
-    const allBookings = this.props.bookings.map((booking) => {
-      debugger
+    const orderedBookings = this.props.bookings.sort(function(a, b) {
+      return a.start_date > b.start_date;
+    });
+
+    const allBookings = orderedBookings.map((booking) => {
       if (booking.user_id === this.props.currentUserId) {
         return <BookingIndexItem key={ booking.id } booking={ booking } spot={this.props.spots[booking.spot_id] || ""}></BookingIndexItem>;
       }
