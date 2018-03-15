@@ -24,7 +24,7 @@ export default class Home extends React.Component {
           <ul>
             <Link to="/spots">
               <li>
-                <img src="/assets/images/home-icon.png" className="home-explore-item-picture" />
+                <img src="https://s3.amazonaws.com/balmybnb-dev/home-icon.png" className="home-explore-item-picture" />
                 <div className="home-explore-item-right">
                   <h3>Homes</h3>
                 </div>

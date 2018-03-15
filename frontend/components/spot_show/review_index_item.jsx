@@ -10,9 +10,9 @@ class ReviewIndexItem extends React.Component {
     // for (var i = 0; i <= 5; i++) {
     return new Array(5).fill().map((e, i) => {
       if (i < this.props.review.rating) {
-        return (<li key={`${this.props.review.id + i}`}><i class="material-icons">star</i></li>);
+        return (<li key={`${this.props.review.id + i}`}><i className="material-icons">star</i></li>);
       } else {
-        return (<li key={`${this.props.review.id + i}`}><i class="material-icons">star_border</i></li>);
+        return (<li key={`${this.props.review.id + i}`}><i className="material-icons">star_border</i></li>);
       }
     });
     // debugger

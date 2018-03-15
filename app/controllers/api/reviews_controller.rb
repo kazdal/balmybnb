@@ -13,11 +13,8 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    debugger
 
     @review = Review.new(review_params)
-    @review.spot_id = params[:spot_id]
-    debugger
     @review.user_id = current_user.id
     if @review.save
       render :show
@@ -29,7 +26,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    debugger
-    params.require(:review).permit(:title, :body, :rating)
+    params.require(:review).permit(:title, :body, :rating, :spot_id)
   end
 end

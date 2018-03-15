@@ -8,6 +8,60 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  animation-timing-function: ease;
+-webkit-animation-timing-function: ease;
+
+  /*-- Fallback image for desktop --*/
+  background-image:url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg);
+}
+
+@keyframes home-page {
+  0% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/s.png);
+  }
+  25% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/wave.jpeg);
+  }
+  50% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/surf.jpeg);
+  }
+  75% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/bali.jpeg);
+  }
+
+  100%{
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg);
+  }
+}
+
+
+
+.home-page{
+ /* height: 100%;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position:50%;
+ z-index:0; */
+
+ /*-- Fallback image for mobile --*/
+ /* background-image:	url(../images/banner-1-sm.jpg); */
+
+
+  /*-- Fallback image for desktop --*/
+  /* background-image:url(../images/banner-1.jpg); */
+
+
+  -webkit-animation: home-page ease 30s both infinite;
+-moz-animation: home-page ease 30s both infinite;
+animation: home-page ease 30s both infinite;
+
 }
 
 .home-page main p {
@@ -49,7 +103,6 @@
   justify-content: center;
   align-items: center;
   background-color: lightyellow;
-  background-image: url(home-icon.png);
 }
 
 .home-explore-section h1 {

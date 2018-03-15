@@ -13,6 +13,12 @@ export default class SpotShow extends React.Component {
     // this.props.fetchSpotImages();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.spotId !== nextProps.match.params.spotId) {
+      this.props.fetchSpot(nextProps.match.params.spotId);
+    }
+  }
+
   render() {
 
     const allReviews = this.props.reviews.map((review) => {

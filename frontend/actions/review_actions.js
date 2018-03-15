@@ -10,9 +10,9 @@ export const receiveAllReviews = reviews => ({
   reviews
 });
 
-export const receiveReview = review => ({
+export const receiveReview = payload => ({
   type: RECEIVE_REVIEW,
-  review
+  payload
 });
 
 export const receiveReviewErrors = errors => ({
@@ -42,7 +42,6 @@ export const fetchReview = (id) => dispatch => {
 };
 
 export const createReview = (review) => dispatch => {
-  debugger
   return APIUtil.createReview(review).then(review => (
     dispatch(receiveReview(review))
   ), err => (

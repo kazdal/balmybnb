@@ -36,6 +36,10 @@
   flex-direction: row;
 }
 
+.spot-show-words {
+  width: 100%;
+}
+
 .review-form {
   width: 100%;
   min-height: 400px;

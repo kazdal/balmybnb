@@ -1,6 +1,7 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export default class ReviewForm extends React.Component {
+class ReviewForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -8,7 +9,8 @@ export default class ReviewForm extends React.Component {
     this.state = {
       title: '',
       body: '',
-      rating: 3
+      rating: 3,
+      spot_id: props.match.params.spotId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleStars = this.handleStars.bind(this);
@@ -20,9 +22,31 @@ export default class ReviewForm extends React.Component {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.spotId !== nextProps.match.params.spotId ) {
+      this.setState({title: '',
+      body: '',
+      rating: 3,
+      spot_id: nextProps.match.params.spotId
+    });
+    this.props.clearReviewErrors();
+    }
+  }
+
+  renderErrors() {
+    return(
+      <ul className="session-errors-list">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     const review = Object.assign({}, this.state);
     this.props.createReview(review);
   }
@@ -36,13 +60,14 @@ export default class ReviewForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="review-form">
+        { this.renderErrors() }
         <label>Rate your stay</label>
-          <fieldset class="review-form-stars" onChange={() => this.update('rating')}>
-            <input type="radio" id="star5" name="rating" value="5" checked={this.state.rating === 5} onChange={() => this.handleStars(5)}/><label for="star5"></label>
-            <input type="radio" id="star4" name="rating" value="4" checked={this.state.rating === 4} onChange={() => this.handleStars(4)}/><label for="star4"></label>
-            <input type="radio" id="star3" name="rating" value="3" checked={this.state.rating === 3} onChange={() => this.handleStars(3)}/><label for="star3"></label>
-            <input type="radio" id="star2" name="rating" value="2" checked={this.state.rating === 2} onChange={() => this.handleStars(2)}/><label for="star2"></label>
-            <input type="radio" id="star1" name="rating" value="1" checked={this.state.rating === 1} onChange={() => this.handleStars(1)}/><label for="star1"></label>
+          <fieldset className="review-form-stars" onChange={() => this.update('rating')}>
+            <input type="radio" id="star5" name="rating" value="5" checked={this.state.rating === 5} onChange={() => this.handleStars(5)}/><label htmlFor="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" checked={this.state.rating === 4} onChange={() => this.handleStars(4)}/><label htmlFor="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" checked={this.state.rating === 3} onChange={() => this.handleStars(3)}/><label htmlFor="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" checked={this.state.rating === 2} onChange={() => this.handleStars(2)}/><label htmlFor="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" checked={this.state.rating === 1} onChange={() => this.handleStars(1)}/><label htmlFor="star1"></label>
           </fieldset>
         <label>Title
           <input type="text" value={this.state.title} onChange={this.update('title')} placeholder="Title your review"></input>
@@ -57,3 +82,5 @@ export default class ReviewForm extends React.Component {
     );
   }
 }
+
+export default withRouter(ReviewForm);
