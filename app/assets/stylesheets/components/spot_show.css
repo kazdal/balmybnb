@@ -95,6 +95,10 @@
   border-bottom: 1px solid #cacccd;
 }
 
+/* .review-index-item:first-of-type {
+  margin-top: none;
+} */
+
 .review-index-item:last-of-type {
   border-width: 0px;
 }
@@ -129,6 +133,8 @@
 .review-index > h2 {
   font-weight: bold;
   font-size: 23px;
+  border-bottom: 1px solid #cacccd;
+  padding: 20px 0;
 }
 
 
