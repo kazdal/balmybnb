@@ -11,8 +11,7 @@ const reviewsReducer = ( state = {}, action) => {
     case RECEIVE_REVIEW:
       return merge({}, state, {[action.payload.review.id]: action.payload.review});
     case RECEIVE_SPOT:
-    debugger
-      const reviews = action.payload ? action.payload.reviews : null;
+      const reviews = action.payload.reviews !== undefined ? action.payload.reviews : state;
       return reviews;
     default:
       return state;

@@ -24,10 +24,7 @@ class SpotIndexItem extends React.Component {
     };
 
     const slides = this.props.spot.spotImageIds.map((spot_image, idx) => {
-      debugger
-      
           if (this.props.spotImages) {
-            debugger
             return (
               <div key={idx} className="slide-wrapper">
                 <img src={this.props.spotImages[spot_image].image_url}></img>
@@ -44,6 +41,7 @@ class SpotIndexItem extends React.Component {
   }
 
   render() {
+    debugger
     const { title, description, price, location } = this.props.spot;
 
     return (

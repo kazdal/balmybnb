@@ -6,8 +6,6 @@ class ReviewIndexItem extends React.Component {
   }
 
   starCounter(){
-    // let stars = [];
-    // for (var i = 0; i <= 5; i++) {
     return new Array(5).fill().map((e, i) => {
       if (i < this.props.review.rating) {
         return (<li key={`${this.props.review.id + i}`}><i className="material-icons">star</i></li>);
@@ -15,8 +13,6 @@ class ReviewIndexItem extends React.Component {
         return (<li key={`${this.props.review.id + i}`}><i className="material-icons">star_border</i></li>);
       }
     });
-    // debugger
-    // return stars;
   }
 
   render() {
