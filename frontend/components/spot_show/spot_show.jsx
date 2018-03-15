@@ -33,7 +33,8 @@ export default class SpotShow extends React.Component {
             <h1 className="spot-show-header">{this.props.spot ? this.props.spot.title : ""}</h1>
             <p>{this.props.spot ? this.props.spot.description : ""}</p>
 
-            <ul>
+            <ul className="review-index">
+              <h2>{ this.props.reviews.length } Reviews</h2>
               { allReviews }
             </ul>
             <ReviewFormContainer />

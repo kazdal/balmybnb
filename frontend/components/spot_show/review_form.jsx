@@ -8,7 +8,7 @@ export default class ReviewForm extends React.Component {
     this.state = {
       title: '',
       body: '',
-      rating: 5
+      rating: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,6 +21,7 @@ export default class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     const review = Object.assign({}, this.state);
     this.props.createReview(review);
   }
@@ -29,12 +30,12 @@ export default class ReviewForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className="review-form">
         <label>Rate your stay</label>
-          <fieldset class="review-form-stars">
-            <input type="radio" id="star1" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-            <input type="radio" id="star1" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-            <input type="radio" id="star1" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-            <input type="radio" id="star1" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-            <input type="radio" id="star1" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+          <fieldset class="review-form-stars" onChange={() => this.update('rating')}>
+            <input type="radio" id="star5" name="rating" value="5" /><label class="Full" for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class="Full" for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class="Full" for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class="Full" for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class="Full" for="star1"></label>
           </fieldset>
         <label>Title
           <input type="text" value={this.state.title} onChange={this.update('title')} placeholder="Title your review"></input>

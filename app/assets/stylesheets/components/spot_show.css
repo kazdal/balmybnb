@@ -126,15 +126,22 @@
   justify-content: center;
 }
 
+.review-index > h2 {
+  font-weight: bold;
+  font-size: 23px;
+}
 
 
 
 
+.review-form-stars {
+  margin-right: auto;
+}
 
 .review-form-stars > input { display: none; }
 .review-form-stars > label:before {
   margin: 5px;
-  font-size: 1.25em;
+  font-size: 22px;
   font-family: Material Icons;
   display: inline-block;
   content: "star";
@@ -143,4 +150,20 @@
 .review-form-stars > label {
   color: #ddd;
  float: right;
+}
+
+.review-form-stars > input:checked ~ label,
+.review-form-stars:not(:checked) > label:hover,
+.review-form-stars:not(:checked) > label:hover ~ label { color: #F7CA18;  }
+
+.review-form-stars > input:checked + label:hover,
+.review-form-stars > input:checked ~ label:hover,
+.review-form-stars > label:hover ~ input:checked ~ label,
+.review-form-stars > input:checked ~ label:hover ~ label { color: #F7CA18; }
+
+.review-form-stars > label:hover {
+  cursor: pointer;
+}
+.review-form-stars {
+  margin-bottom: 5px;
 }

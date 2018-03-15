@@ -41,7 +41,7 @@ export const fetchReview = (id) => dispatch => {
   ));
 };
 
-export const createRevuew = (review) => dispatch => {
+export const createReview = (review) => dispatch => {
   return APIUtil.createReview(review).then(review => (
     dispatch(receiveReview(review))
   ), err => (
