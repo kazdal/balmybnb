@@ -37,7 +37,7 @@ export default class SpotShow extends React.Component {
               <h2>{ this.props.reviews.length } Reviews</h2>
               { allReviews }
             </ul>
-            <ReviewFormContainer />
+            { this.props.currentUser && <ReviewFormContainer /> }
           </div>
           <BookingFormContainer spot={ this.props.spot ? this.props.spot : "" }/>
         </section>
