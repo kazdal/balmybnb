@@ -49,6 +49,7 @@
 }
 
 .page-footer section .footer-right img {
-  height: 80px;
-  margin: -25px -19px -25px -8px;
+  height: 45px;
+  margin: -25px -15px -25px 0px;
+  z-index: -1;
 }

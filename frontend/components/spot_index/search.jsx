@@ -6,6 +6,7 @@ const Search = ({ spots, spotImages, fetchSpots, fetchSpotImages, updateFilter, 
   <section className="spot-index-main">
     <SpotIndex
       spots = { spots }
+      coordinates = { coordinates }
       spotImages = { spotImages }
       fetchSpots = { fetchSpots }
       fetchSpotImages = { fetchSpotImages }

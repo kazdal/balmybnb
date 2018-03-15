@@ -11,8 +11,25 @@ export default class SpotIndex extends React.Component {
   componentDidMount() {
     this.props.fetchSpotImages();
   }
+  //
+  // reverseGeocode () {
+  //   let lat = this.props.coordinates[0];
+  //   let lng = this.props.coordinates[1];
+  //   let latlng = new google.maps.Lat.Lng(lat, lng);
+  //   let geocoder = new google.maps.Geocoder();
+  //   geocoder.geocode( { 'latLng': latlng }, (results, status) => {
+  //     if (state === google.maps.GeocoderStatus.OK) {
+  //       console.log(results);
+  //       debugger
+  //       let address = results;
+  //     }
+  //   });
+  //
+  // }
+
 
   render() {
+
     const allImages = this.props.spotImages;
     const allSpots = this.props.spots.map((spot) => {
         return <Link key={ spot.id } to={`/spots/${spot.id}`}><SpotIndexItem key={ spot.id } spot={ spot } spotImages={ this.props.spotImages } ></SpotIndexItem></Link>;

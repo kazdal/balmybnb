@@ -39,9 +39,9 @@ class SpotIndexItem extends React.Component {
     );
   }
 
+
   render() {
     const { title, description, price, location } = this.props.spot;
-
     return (
       <li className="spot-index-item" onClick={this.handleClick}>
         { this.slickSlider() }

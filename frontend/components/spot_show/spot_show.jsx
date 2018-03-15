@@ -34,10 +34,9 @@ export default class SpotShow extends React.Component {
       className: "spot-show-slider"
     };
 
-      debugger
     if (this.props.spot !== undefined) {
       const allImages = this.props.spot.spotImageIds.map((spotImageId) => {
-        debugger
+
         return (
           <div key={spotImageId} className="slide-wrapper">
             <img src={this.props.spotImages[spotImageId].image_url}></img>
