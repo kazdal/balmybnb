@@ -9,10 +9,11 @@ const reviewsReducer = ( state = {}, action) => {
     case RECEIVE_ALL_REVIEWS:
       return action.reviews;
     case RECEIVE_REVIEW:
-      
       return merge({}, state, {[action.payload.review.id]: action.payload.review});
     case RECEIVE_SPOT:
-      return action.payload.reviews;
+    debugger
+      const reviews = action.payload ? action.payload.reviews : null;
+      return reviews;
     default:
       return state;
   }

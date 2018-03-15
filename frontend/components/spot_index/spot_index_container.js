@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ const msp = state => {
 const mdp = dispatch => {
   return {
     // fetchSpots: () => dispatch(fetchSpots()),
-    // fetchSpotImages: () => dispatch(fetchSpotImages())
+    fetchSpotImages: () => dispatch(fetchSpotImages())
   };
 };
 

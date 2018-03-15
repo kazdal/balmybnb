@@ -26,3 +26,6 @@
   Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 3, spot_id: Spot.first.id, user_id: User.first.id)
   Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 2, spot_id: Spot.first.id, user_id: User.first.id)
   Review.create(title: 'What a great place', body: 'Such a nice place. Nicer than I expected. So very nice.', rating: 5, spot_id: Spot.first.id, user_id: User.first.id)
+
+  SpotImage.create(image_url: "https://images.unsplash.com/photo-1463714179529-808685e81a6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e6afa77bcd5066d73d0e7d3854bcf1b4&auto=format&fit=crop&w=1050&q=80", spot_id: Spot.first.id)
+  SpotImage.create(image_url: "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91b874ce453385d8867cc98ee582fee3&auto=format&fit=crop&w=1955&q=80", spot_id: Spot.first.id )

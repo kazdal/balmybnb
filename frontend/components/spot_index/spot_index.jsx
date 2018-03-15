@@ -8,6 +8,10 @@ export default class SpotIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchSpotImages();
+  }
+
   render() {
     const allSpots = this.props.spots.map((spot) => {
         return <Link key={ spot.id } to={`/spots/${spot.id}`}><SpotIndexItem key={ spot.id } spot={ spot } spotImages={this.props.spotImages} ></SpotIndexItem></Link>;

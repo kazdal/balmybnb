@@ -9,15 +9,16 @@ export default class SpotShow extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchSpot(this.props.match.params.spotId);
     // this.props.fetchSpotImages();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.spotId !== nextProps.match.params.spotId) {
-      this.props.fetchSpot(nextProps.match.params.spotId);
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props.match.params.spotId !== nextProps.match.params.spotId) {
+  //     this.props.fetchSpot(nextProps.match.params.spotId);
+  //   }
+  // }
 
   render() {
 
