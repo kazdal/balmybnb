@@ -13,8 +13,8 @@ export default class Home extends React.Component {
       <section className="home-page-container">
         <section className="home-page">
           <main>
-            <p>Book unique homes and</p>
-            <p>experiences all over the world.</p>
+            <p>Book unique homes in</p>
+            <p>warm climates around the world.</p>
               <input type="text" placeholder="Try 'Los Angeles'" className="home-search-bar" />
           </main>
         </section>
