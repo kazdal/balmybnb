@@ -23,11 +23,11 @@ class SpotIndexItem extends React.Component {
       slidesToScroll: 1
     };
 
-    const slides = this.props.spot.spotImageIds.map((spot_image, idx) => {
+    const slides = this.props.spot.spotImageIds.map((spotImageId, idx) => {
           if (this.props.spotImages) {
             return (
-              <div key={idx} className="slide-wrapper">
-                <img src={this.props.spotImages[spot_image].image_url}></img>
+              <div key={spotImageId} className="slide-wrapper">
+                <img src={this.props.spotImages[spotImageId].image_url}></img>
               </div>
             );
           }
@@ -35,7 +35,6 @@ class SpotIndexItem extends React.Component {
     return (
       <Slider {...slickSettings}>
         { slides }
-        <div className="slide-wrapper"></div>
       </Slider>
     );
   }

@@ -8,7 +8,7 @@ import { fetchSpotImages } from '../../actions/spot_image_actions';
 const msp = (state, ownProps) => {
   return {
     spot: state.entities.spots[ownProps.match.params.spotId],
-    spot_images: state.entities.spot_images,
+    spotImages: state.entities.spot_images,
     reviews: Object.values(state.entities.reviews),
     currentUser: state.session.currentUser
   };
@@ -16,8 +16,7 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchSpot: (id) => dispatch(fetchSpot(id)),
-    fetchSpotImages: () => dispatch(fetchSpotImages())
+    fetchSpot: (id) => dispatch(fetchSpot(id))
   };
 };
 

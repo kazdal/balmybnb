@@ -1,7 +1,9 @@
 import React from 'react';
 import BookingFormContainer from './booking_form_container';
 import ReviewFormContainer from './review_form_container';
-import ReviewIndexItem from './review_index_item'
+import ReviewIndexItem from './review_index_item';
+import Slider from 'react-slick';
+
 
 export default class SpotShow extends React.Component {
   constructor(props) {
@@ -10,28 +12,47 @@ export default class SpotShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
-    // this.props.fetchSpotImages();
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.spotId !== nextProps.match.params.spotId) {
-  //     this.props.fetchSpot(nextProps.match.params.spotId);
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.spotId !== nextProps.match.params.spotId) {
+      this.props.fetchSpot(nextProps.match.params.spotId);
+    }
+  }
 
   render() {
-
     const allReviews = this.props.reviews.map((review) => {
-        return <ReviewIndexItem key={ review.id } review={ review } />;
+      return <ReviewIndexItem key={ review.id } review={ review } />;
       });
+
+    let slickSettings = {
+      centerMode: true,
+      infinite: true,
+      speed: 0,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      className: "spot-show-slider"
+    };
+
+      debugger
+    if (this.props.spot !== undefined) {
+      const allImages = this.props.spot.spotImageIds.map((spotImageId) => {
+        debugger
+        return (
+          <div key={spotImageId} className="slide-wrapper">
+            <img src={this.props.spotImages[spotImageId].image_url}></img>
+          </div>
+          );
+        });
+    }
 
     return (
       <section className="spot-show-section">
 
         {
-          this.props.spot_images === {} ?
-          <img src={this.props.spot_images[11].image_url} className="spot-show-slider"></img>
-          : ""
+          Object.values(this.props.spotImages).length > 1 &&
+              <img className="spot-show-slider" src={this.props.spotImages[this.props.spot.spotImageIds[0]].image_url}>
+              </img>
         }
 
         <section className="spot-show-main">
@@ -51,3 +72,17 @@ export default class SpotShow extends React.Component {
     );
   }
 }
+
+
+// {
+//   Object.values(this.props.spotImages).length > 1 &&
+//   <Slider {...slickSettings}>
+//     { this.allImages }
+//     <div key={1} className="slide-wrapper">
+//       <img className="spot-show-slider" src={this.props.spotImages[1].image_url}></img>
+//     </div>
+//     <div key={2} className="slide-wrapper">
+//       <img src={this.props.spotImages[1].image_url}></img>
+//     </div>
+//   </Slider>
+// }

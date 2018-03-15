@@ -7,9 +7,10 @@
 }
 
 .spot-show-slider {
-  height: 510px;
-  width: 100%;
-  background-color: #F1A9A0;
+  height: 100%; */
+  width: 60%;
+  /* width: 50%; */
+  /* background-color: #F1A9A0; */
   object-fit: cover;
 }
 

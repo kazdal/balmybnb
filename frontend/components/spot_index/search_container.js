@@ -7,13 +7,15 @@ import { fetchSpotImages } from '../../actions/spot_image_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
 const msp = state => {
+  debugger
   return {
     spots: Object.assign([], state.entities.spots),
-    spot_images: Object.assign([], state.entities.spot_images)
+    spotImages: Object.assign([], state.entities.spot_images)
   };
 };
 
 const mdp = dispatch => {
+  debugger
   return {
     fetchSpots: () => dispatch(fetchSpots()),
     fetchSpotImages: () => dispatch(fetchSpotImages()),
