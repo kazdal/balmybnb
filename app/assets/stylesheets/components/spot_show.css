@@ -87,11 +87,16 @@
 
 .review-index-item {
   min-height: 150px;
-  min-height: 115px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  border-bottom: 1px solid #cacccd;
+}
+
+.review-index-item:last-of-type {
+  border-width: 0px;
 }
 
 .review-index-item > h1 {
@@ -104,6 +109,38 @@
 }
 
 .review-rating-stars {
+  margin-left: 8px;
   display: flex;
   color: #F7CA18;
+  margin-bottom: -7px;
+}
+
+.review-rating-stars > li > i {
+  font-size: 18px;
+}
+
+.review-index-header {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+.review-form-stars > input { display: none; }
+.review-form-stars > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: Material Icons;
+  display: inline-block;
+  content: "star";
+}
+
+.review-form-stars > label {
+  color: #ddd;
+ float: right;
 }

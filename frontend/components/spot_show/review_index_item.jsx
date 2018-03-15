@@ -25,10 +25,14 @@ class ReviewIndexItem extends React.Component {
 
     return (
       <li className="review-index-item">
-        <h1>{ title }</h1>
+        <div className="review-index-header">
+          <h1>
+            { title }
+          </h1>
           <ul className="review-rating-stars">
             { this.starCounter() }
           </ul>
+        </div>
         <p>{ body }</p>
       </li>
     );
