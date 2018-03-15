@@ -122,6 +122,7 @@
   box-shadow: 1px 1px 40px rgba(22, 23, 31, 0.4);
   padding: 12px;
   padding-left: 60px;
+  color: rgb(118, 118, 118);
 }
 .home-search-bar-wrapper {
   position: relative;
@@ -130,7 +131,7 @@
 .home-search-bar-wrapper > i {
   position: absolute;
   top: 42px;
-  color: #484848;
+  color: rgb(118, 118, 118);
   font-size: 33px;
   left: 10px;
 }
