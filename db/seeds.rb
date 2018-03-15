@@ -29,3 +29,9 @@
 
   SpotImage.create(image_url: "https://images.unsplash.com/photo-1463714179529-808685e81a6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e6afa77bcd5066d73d0e7d3854bcf1b4&auto=format&fit=crop&w=1050&q=80", spot_id: Spot.first.id)
   SpotImage.create(image_url: "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=91b874ce453385d8867cc98ee582fee3&auto=format&fit=crop&w=1955&q=80", spot_id: Spot.first.id )
+
+  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1512212621149-107ffe572d2f.jpeg", spot_id: Spot.second.id )
+  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1501183638710-841dd1904471.jpeg", spot_id: Spot.second.id )
+
+  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1512212621149-107ffe572d2f.jpeg", spot_id: Spot.third.id )
+  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1501183638710-841dd1904471.jpeg", spot_id: Spot.third.id )
