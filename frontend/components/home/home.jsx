@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from '../search_bar';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class Home extends React.Component {
           <main>
             <p>Book unique homes in</p>
             <p>warm climates around the world.</p>
-              <input type="text" placeholder="Try 'Los Angeles'" className="home-search-bar" />
+              <SearchBar />
           </main>
         </section>
 

@@ -40,7 +40,6 @@ class SpotIndexItem extends React.Component {
   }
 
   render() {
-    debugger
     const { title, description, price, location } = this.props.spot;
 
     return (

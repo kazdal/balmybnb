@@ -4,12 +4,16 @@ import MarkerManager from '../../util/marker_manager';
 export default class SpotMap extends React.Component {
   constructor(props) {
     super(props);
+    this.lat = this.props.coordinates[0];
+    this.lng = this.props.coordinates[1];
   }
+
+// lat: 34.019956, lng: -118.824270
 
   componentDidMount() {
     // set map location
     const mapOptions = {
-      center: { lat: 34.019956, lng: -118.824270 },
+      center: { lat: this.lat, lng: this.lng },
       zoom: 10
     };
 

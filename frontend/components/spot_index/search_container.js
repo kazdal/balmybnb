@@ -5,21 +5,22 @@ import Search from './search';
 import { fetchSpots } from '../../actions/spot_actions';
 import { fetchSpotImages } from '../../actions/spot_image_actions';
 import { updateFilter } from '../../actions/filter_actions';
+import { receiveCoordinates } from '../../actions/coordinate_actions';
 
 const msp = state => {
-  debugger
   return {
     spots: Object.assign([], state.entities.spots),
-    spotImages: Object.assign([], state.entities.spot_images)
+    spotImages: Object.assign([], state.entities.spot_images),
+    coordinates: state.ui.coordinates
   };
 };
 
 const mdp = dispatch => {
-  debugger
   return {
     fetchSpots: () => dispatch(fetchSpots()),
     fetchSpotImages: () => dispatch(fetchSpotImages()),
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
+    receiveCoordinates: (coordinates) => dispatch(receiveCoordinates(coordinates))
   };
 };
 

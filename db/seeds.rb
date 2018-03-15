@@ -33,5 +33,5 @@
   SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1512212621149-107ffe572d2f.jpeg", spot_id: Spot.second.id )
   SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1501183638710-841dd1904471.jpeg", spot_id: Spot.second.id )
 
-  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1512212621149-107ffe572d2f.jpeg", spot_id: Spot.third.id )
-  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/photo-1501183638710-841dd1904471.jpeg", spot_id: Spot.third.id )
+  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/sss.jpg", spot_id: Spot.third.id )
+  SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/c.jpg", spot_id: Spot.third.id )
