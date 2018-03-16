@@ -11,6 +11,7 @@
   Spot.delete_all
   Booking.delete_all
   Review.delete_all
+  SpotImage.delete_all
 
   User.create(email: 'worldtraveler@onlywarmplaces.com', first_name: 'Dan', last_name: 'Kang', image_url: 'demo.jpg', password: '123456')
 
