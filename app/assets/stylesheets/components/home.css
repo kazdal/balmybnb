@@ -14,9 +14,9 @@
 
   animation-timing-function: ease;
   -webkit-animation-timing-function: ease;
-  -webkit-animation: home-page ease 30s both infinite;
-  -moz-animation: home-page ease 30s both infinite;
-  animation: home-page ease 30s both infinite;
+  -webkit-animation: home-page ease 24s both infinite;
+  -moz-animation: home-page ease 24s both infinite;
+  animation: home-page ease 24s both infinite;
 
   /*-- Fallback image for desktop --*/
   background-image:url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg);
@@ -24,22 +24,19 @@
 
 @keyframes home-page {
   0% {
-    background-image: url(https://s3.amazonaws.com/balmybnb-dev/s.png);
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/3.png);
   }
-  20% {
-    background-image: url(https://s3.amazonaws.com/balmybnb-dev/wave.jpeg);
+  34% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/2.jpg);
   }
-  40% {
-    background-image: url(https://s3.amazonaws.com/balmybnb-dev/surf.jpeg);
+  50% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/1.png);
   }
-  60% {
-    background-image: url(https://s3.amazonaws.com/balmybnb-dev/bali.jpeg);
-  }
-  80%{
-    background-image: url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg);
+  75% {
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/4.png);
   }
   100% {
-    background-image: url(https://s3.amazonaws.com/balmybnb-dev/s.png);
+    background-image: url(https://s3.amazonaws.com/balmybnb-dev/3.png);
   }
 }
 
