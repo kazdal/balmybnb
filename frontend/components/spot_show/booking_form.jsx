@@ -108,8 +108,7 @@ export default class BookingForm extends React.Component {
               isDayBlocked={day => this.isDayBooked().includes(moment(day).format('YYYY-MM-DD'))}
               />
 
-          <label>Guests</label>
-            <select className="booking-form-input"></select>
+
 
             <input className="booking-submit" type="submit" value="Book" />
         </form>
@@ -121,3 +120,7 @@ export default class BookingForm extends React.Component {
     );
   }
 }
+
+
+// <label>Guests</label>
+//   <select className="booking-form-input"></select>

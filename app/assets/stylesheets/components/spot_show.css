@@ -7,7 +7,7 @@
 }
 
 .spot-show-slider {
-  height: 100%; */
+  max-height: 800px;
   width: 60%;
   /* width: 50%; */
   /* background-color: #F1A9A0; */
