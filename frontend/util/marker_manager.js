@@ -23,9 +23,9 @@ export default class MarkerManager {
           fillColor: 'white',
           fillOpacity: 1,
           scale: 1,
-          strokeColor: 'white',
+          strokeColor: 'black',
           labelOrigin: new google.maps.Point(0, -25),
-          strokeWeight: 0
+          strokeWeight: 1,
         };
 
     this.markers[spot.id] =
