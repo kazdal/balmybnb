@@ -8,6 +8,7 @@
 }
 
 .spot-index-left-items {
+  min-height: 70vh;
   width: 66.66%;
   display: flex;
   justify-content: start;
