@@ -29,16 +29,7 @@ class Home extends React.Component {
         </section>
         <section className="home-explore-section">
           <h1>Explore balmybnb</h1>
-          <ul>
-            <Link to="/spots">
-              <li>
-                <img src="https://s3.amazonaws.com/balmybnb-dev/home-icon.png" className="home-explore-item-picture" />
-                <div className="home-explore-item-right">
-                  <h3>Homes</h3>
-                </div>
-              </li>
-            </Link>
-          </ul>
+
 
           <section className="home-explore-mosaic">
             <div className="home-explore-mosaic-4x australia"
@@ -81,6 +72,18 @@ class Home extends React.Component {
     );
   }
 }
+
+// <ul>
+//   <Link to="/spots">
+//     <li>
+//       <img src="https://s3.amazonaws.com/balmybnb-dev/home-icon.png" className="home-explore-item-picture" />
+//       <div className="home-explore-item-right">
+//         <h3>Homes</h3>
+//       </div>
+//     </li>
+//   </Link>
+// </ul>
+
 
 const msp = state => ({
 

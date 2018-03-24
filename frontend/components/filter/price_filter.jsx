@@ -5,8 +5,8 @@ export default class PriceFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      minPrice: 10,
-      maxPrice: 1000
+      minPrice: this.props.minPrice,
+      maxPrice: this.props.maxPrice
     };
     this.updatePrice = this.updatePrice.bind(this);
   }
@@ -28,15 +28,16 @@ export default class PriceFilter extends React.Component {
 
     return (
       <div className="white-modal" onClick={this.props.closeModal}>
-        <div className="filter-container" onClick={e => e.stopPropagation()}>
+        <div className="filter-container filter-price" onClick={e => e.stopPropagation()}>
           <p>
             ${this.state.minPrice} - ${this.state.maxPrice}
           </p>
           <Range
             min={10}
-            max={1000}
+            max={1250}
             allowCross={false}
-            defaultValue={[0, 1000]}
+            value={[this.state.minPrice, this.state.maxPrice]}
+            defaultValue={[this.state.minPrice, this.state.maxPrice]}
             onChange={this.updatePrice}/>
 
           <a onClick={() => this.handleChange(['minPrice', 'maxPrice'], [this.state.minPrice, this.state.maxPrice] )}>Apply</a>

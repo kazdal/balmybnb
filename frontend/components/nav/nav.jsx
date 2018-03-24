@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FilterNavContainer from '../filter/filter_nav_container';
-
+import SearchBar from '../search_bar';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -88,6 +88,10 @@ export default class Nav extends React.Component {
           <Link to="/">
             <i className="material-icons">wb_sunny</i>
           </Link>
+          {
+            this.props.match.path === "/spots" ? <SearchBar /> : ""
+          }
+
             { this.props.currentUser ?
               this.signedInNav() :
               this.signedOutNav()

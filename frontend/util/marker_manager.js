@@ -19,13 +19,13 @@ export default class MarkerManager {
 
   createMarkerFromSpot(spot) {
     const mapIcon = {
-          path: 'M22-48h-44v43h16l6 5 6-5h16z',
+          path: 'm22,-28.38281l-44,0l0,20l16,0l6,5l6,-5l16,0l0,-20z',
           fillColor: 'white',
           fillOpacity: 1,
           scale: 1,
           strokeColor: 'black',
-          labelOrigin: new google.maps.Point(0, -25),
-          strokeWeight: 1,
+          labelOrigin: new google.maps.Point(0, -18),
+          strokeWeight: .5,
         };
 
     this.markers[spot.id] =

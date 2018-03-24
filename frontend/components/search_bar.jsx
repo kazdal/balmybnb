@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
         const lng = results[0].geometry.location.lng();
         this.props.receiveCoordinates([lat, lng]);
         this.props.history.push('/spots');
-
+        
         // dispatch action here that hits ui reducer
         // push history with spots and it will go there based on route
       }
