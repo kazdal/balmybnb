@@ -51,7 +51,7 @@ class SearchBar extends React.Component {
 }
 
 const msp = state => ({
-  coords: state.ui.coordinates
+
 });
 
 

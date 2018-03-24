@@ -13,16 +13,19 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  animation-timing-function: ease;
+  /* animation-timing-function: ease;
   -webkit-animation-timing-function: ease;
   -webkit-animation: home-page ease 24s both infinite;
   -moz-animation: home-page ease 24s both infinite;
-  animation: home-page ease 24s both infinite;
+  animation: home-page ease 24s both infinite; */
 
   /*-- Fallback image for desktop --*/
-  background-image:url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg);
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/1.png);
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/3.png);
+  /* background-image: url(https://s3.amazonaws.com/balmybnb-dev/2.jpg); */
+  /* background-image:url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg); */
 }
-
+/*
 @keyframes home-page {
   0% {
     background-image: url(https://s3.amazonaws.com/balmybnb-dev/3.png);
@@ -39,7 +42,7 @@
   100% {
     background-image: url(https://s3.amazonaws.com/balmybnb-dev/3.png);
   }
-}
+} */
 
 .home-page main p {
   font-weight: 600;
@@ -119,7 +122,7 @@
   border-radius: 4px;
   box-shadow: 1px 1px 40px rgba(22, 23, 31, 0.4);
   padding: 12px;
-  padding-left: 60px;
+  padding-left: 55px;
   color: rgb(118, 118, 118);
 }
 .home-search-bar-wrapper {
@@ -128,10 +131,10 @@
 
 .home-search-bar-wrapper > i {
   position: absolute;
-  top: 42px;
+  top: 40px;
   color: rgb(118, 118, 118);
   font-size: 33px;
-  left: 10px;
+  left: 15px;
 }
 
 .home-search-button {
@@ -146,4 +149,92 @@
   position: absolute;
   top: 30px;
   right: -100px;
+}
+
+.home-explore-mosaic {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap:wrap;
+  padding-top: 30px;
+}
+
+.home-explore-mosaic > div {
+}
+
+.home-explore-mosaic > div:hover {
+  cursor: pointer;
+}
+
+.home-explore-mosaic > div > h3 {
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 40px rgba(22, 23, 31, 0.4);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.home-explore-mosaic-1x {
+  width: 25%;
+  height: 350px;
+}
+
+.home-explore-mosaic-2x {
+  width: 49%;
+  height: 350px;
+  margin: 2% 2% 0 0;
+}
+
+.home-explore-mosaic-2x:nth-of-type(odd) {
+  margin-right: 0px;
+}
+
+.home-explore-mosaic-4x {
+  width: 100%;
+  height: 350px;
+}
+
+.australia {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/australia.jpg);
+}
+
+.california {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/california.jpeg);
+}
+
+.home-explore-mosaic > .california > h3 {
+  text-shadow: 1px 1px 40px rgb(22, 23, 31);
+}
+
+.miami {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/miami.jpeg);
+}
+
+.panama {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/panama.jpeg);
+}
+
+.maldives {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/maldives.jpeg);
 }

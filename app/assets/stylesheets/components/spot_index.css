@@ -130,6 +130,7 @@
   padding-left: 12px;
   padding-right: 12px;
   font-size: 15px;
+  background-color: white;
 }
 
 .filter-nav > ul > button:focus {
@@ -216,7 +217,7 @@
 
 .slide-wrapper > img {
   object-fit: cover;
-  height: 100%;
+  width: 100%;
   border-radius: 5px;
 }
 
