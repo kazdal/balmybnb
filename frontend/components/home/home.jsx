@@ -42,31 +42,35 @@ class Home extends React.Component {
 
           <section className="home-explore-mosaic">
             <div className="home-explore-mosaic-4x australia"
-              onClick={ handleExploreMosaic(-28.002662, 153.400253) }>
+              onClick={ () => this.handleExploreMosaic(-28.002662, 153.400253) }>
               <h3>
                 Australia
               </h3>
             </div>
+
             <div className="home-explore-mosaic-2x california"
-              onClick={ handleExploreMosaic(32.712113, -117.192017)>
+              onClick={ () => this.handleExploreMosaic(34.026265, -118.497149) }>
               <h3>
-                San Diego
+                Los Angeles
               </h3>
             </div>
+
             <div className="home-explore-mosaic-2x miami"
-              onClick={ handleExploreMosaic(25.827377, -80.124694)>
+              onClick={ () => this.handleExploreMosaic(25.827377, -80.124694) }>
               <h3>
                 Miami
               </h3>
             </div>
+
             <div className="home-explore-mosaic-2x panama"
-              onClick={ handleExploreMosaic(32.712113, -117.192017)>
+              onClick={ () => this.handleExploreMosaic(32.712113, -117.192017) }>
               <h3>
                 Panama
               </h3>
             </div>
+
             <div className="home-explore-mosaic-2x maldives"
-              onClick={ handleExploreMosaic(32.712113, -117.192017)>
+              onClick={ () => this.handleExploreMosaic(-0.004130, 73.321958) }>
               <h3>
                 Maldives
               </h3>
@@ -79,7 +83,7 @@ class Home extends React.Component {
 }
 
 const msp = state => ({
-  coords: state.ui.coordinates
+
 });
 
 
