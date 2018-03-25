@@ -8,7 +8,8 @@ import PriceFilter from './price_filter';
 
 const msp = state => ({
   minPrice: state.ui.filters.minPrice,
-  maxPrice: state.ui.filters.maxPrice
+  maxPrice: state.ui.filters.maxPrice,
+  spots: Object.values(state.entities.spots)
 });
 
 const mdp = dispatch => ({

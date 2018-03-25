@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { UPDATE_FILTER } from '../actions/filter_actions';
+import { UPDATE_FILTER, RESET_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
   bounds: {},
@@ -9,12 +9,16 @@ const defaultFilters = Object.freeze({
 
 const filtersReducer = (state = defaultFilters, action) => {
   Object.freeze(state);
-  if (action.type === UPDATE_FILTER) {
-    const newFilter = {
-      [action.filter]: action.value
-    };
-    return merge({}, state, newFilter);
-  } else {
+  switch (action.type) {
+    case UPDATE_FILTER:
+      const newFilter = {
+        [action.filter]: action.value
+      };
+      return merge({}, state, newFilter);
+    case RESET_FILTER:
+    debugger
+      return merge({}, state, {minPrice: defaultFilters.minPrice}, {maxPrice: defaultFilters.maxPrice});
+    default:
     return state;
   }
 };

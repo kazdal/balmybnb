@@ -24,6 +24,13 @@ export default class PriceFilter extends React.Component {
     this.props.closeModal();
   }
 
+  averagePrice() {
+    const spotCount = this.props.spots.length;
+    let totalPrice = 0;
+    this.props.spots.forEach((spot) => totalPrice += spot.price);
+    return Math.round(totalPrice / spotCount);
+  }
+
   render() {
 
     return (
@@ -32,6 +39,8 @@ export default class PriceFilter extends React.Component {
           <p>
             ${this.state.minPrice} - ${this.state.maxPrice}
           </p>
+
+          <h6>The average nightly price is ${ this.averagePrice() }</h6>
           <Range
             min={10}
             max={1250}

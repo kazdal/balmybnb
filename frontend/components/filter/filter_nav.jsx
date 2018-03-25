@@ -5,6 +5,10 @@ class FilterNav extends React.Component {
     super(props);
   }
 
+  componentWillUnmount() {
+    this.props.resetFilter();
+  }
+
   render() {
     return (
       <nav className="filter-nav">

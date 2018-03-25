@@ -100,7 +100,7 @@
 .spot-index-nav-bar {
   position: fixed;
   margin-top: 0;
-  z-index: 777;
+  z-index: 1;
   top: 0px;
   width: 100%;
 }
@@ -142,7 +142,7 @@
 .filter-container {
   background-color: white;
   width: 390px;
-  height: 150px;
+  height: 175px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 25px;
@@ -190,6 +190,10 @@
   top: 144px;
 }
 
+.filter-price > h6 {
+  font-size: 14px;
+  margin-top: 12px;
+}
 
 
 
