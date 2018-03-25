@@ -151,6 +151,62 @@
   right: -100px;
 }
 
+.pac-item {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  min-height: 45px;
+  color: #484848;
+  display: flex;
+  align-items: center;
+
+}
+
+.pac-item-query {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  color: #484848;
+}
+
+.pac-item:hover, .pac-item-selected {
+  background-color: rgba(0, 132, 137, .3);
+}
+
+.pac-matched {
+  font-size: 18px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
+.pac-icon {
+  font-size: 20px;
+  color: black;
+  width: 15px;
+
+  height: 20px;
+  margin-right: 7px;
+  margin-top: 6px;
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+  background-size: 34px;
+  background-image: none;
+}
+
+.pac-icon:after {
+  font-family: 'Material Icons';
+  content: "e55f";
+  color: black;
+
+}
+
+.pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
+
+
 .home-explore-mosaic {
   width: 100%;
   display: flex;
@@ -164,6 +220,8 @@
 
 .home-explore-mosaic > div:hover {
   cursor: pointer;
+  -webkit-filter: brightness(1.01);
+
 }
 
 .home-explore-mosaic > div > h3 {

@@ -32,6 +32,28 @@ export default class SpotMap extends React.Component {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.coordinates !== nextProps.coordinates) {
+      debugger
+      const mapOptions = {
+        center: { lat: nextProps.coordinates[0], lng: nextProps.coordinates[1] },
+        zoom: 10
+      };
+      this.map = new google.maps.Map(this.mapNode, mapOptions);
+      this.MarkerManager = new MarkerManager(this.map);
+      this.MarkerManager.updateMarkers(this.props.spots);
+
+      google.maps.event.addListener(this.map, "idle", () => {
+        const { north, south, east, west } = this.map.getBounds().toJSON();
+        const bounds = {
+          northEast: { lat: north, lng: east },
+          southWest: { lat: south, lng: west }
+        };
+        this.props.updateFilter("bounds", bounds);
+      });
+    }
+  }
+
   componentWillUpdate() {
     this.MarkerManager.updateMarkers(this.props.spots);
   }

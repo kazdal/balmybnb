@@ -8,7 +8,7 @@ import { fetchSpotImages } from '../../actions/spot_image_actions';
 const msp = (state, ownProps) => {
   return {
     spot: state.entities.spots[ownProps.match.params.spotId],
-    spotImages: state.entities.spot_images,
+    spotImages: state.entities.spotImages,
     reviews: Object.values(state.entities.reviews),
     currentUser: state.session.currentUser
   };

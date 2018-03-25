@@ -35,7 +35,7 @@ export default class SpotIndex extends React.Component {
           <SpotIndexItem
             key={spot.id}
             spot={spot}
-            spotImages={this.props.spotImages}
+            spotImages={ allImages }
           />
         </Link>
       );

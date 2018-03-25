@@ -16,7 +16,6 @@ const filtersReducer = (state = defaultFilters, action) => {
       };
       return merge({}, state, newFilter);
     case RESET_FILTER:
-      debugger;
       return merge(
         {},
         state,

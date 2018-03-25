@@ -10,7 +10,7 @@ import { receiveCoordinates } from "../../actions/coordinate_actions";
 const msp = state => {
   return {
     spots: Object.assign([], state.entities.spots),
-    spotImages: Object.assign([], state.entities.spot_images),
+    spotImages: Object.assign([], state.entities.spotImages),
     coordinates: state.ui.coordinates
   };
 };

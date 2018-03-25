@@ -23,7 +23,8 @@ class SpotIndexItem extends React.Component {
     };
 
     const slides = this.props.spot.spotImageIds.map((spotImageId, idx) => {
-      if (this.props.spotImages) {
+
+      if (this.props.spotImages.length !== 0) {
         return (
           <div key={spotImageId} className="slide-wrapper">
             <img src={this.props.spotImages[spotImageId].image_url} />

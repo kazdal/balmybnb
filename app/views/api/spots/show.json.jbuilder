@@ -1,6 +1,6 @@
 json.spot do
   json.partial! '/api/spots/spot', spot: @spot
-  # json.reviewIds @spot.reviews.pluck(:id)
+  json.reviewIds @spot.reviews.pluck(:id)
   json.spotImageIds @spot.spot_images.pluck(:id)
 end
 
