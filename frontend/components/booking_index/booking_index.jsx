@@ -8,6 +8,7 @@ export default class BookingIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpots();
+    this.props.fetchSpotImages();
     this.props.fetchCurrentUser();
   }
 
@@ -23,6 +24,7 @@ export default class BookingIndex extends React.Component {
             key={booking.id}
             booking={booking}
             spot={this.props.spots[booking.spot_id] || ""}
+            spotImages={this.props.spotImages}
           />
         );
       }

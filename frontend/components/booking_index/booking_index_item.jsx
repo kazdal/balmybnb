@@ -8,12 +8,13 @@ export default class SpotIndexItem extends React.Component {
   }
 
   render() {
-    const { booking, spot } = this.props;
+    const { booking, spot, spotImages } = this.props;
+    debugger
 
     return (
       <li className="booking-index-item">
         <Link to={`/spots/${spot.id}`}>
-          <img className="booking-item-img" />
+          <img src={ (spotImages && spot) ? spotImages[spot.spotImageIds[0]].image_url : "" } className="booking-item-img" />
         </Link>
 
         <div className="booking-index-item-text">
