@@ -1,5 +1,5 @@
-import React from 'react';
-import BookingIndexItem from './booking_index_item';
+import React from "react";
+import BookingIndexItem from "./booking_index_item";
 
 export default class BookingIndex extends React.Component {
   constructor(props) {
@@ -16,9 +16,15 @@ export default class BookingIndex extends React.Component {
       return a.start_date > b.start_date;
     });
 
-    const allBookings = orderedBookings.map((booking) => {
+    const allBookings = orderedBookings.map(booking => {
       if (booking.user_id === this.props.currentUserId) {
-        return <BookingIndexItem key={ booking.id } booking={ booking } spot={this.props.spots[booking.spot_id] || ""}></BookingIndexItem>;
+        return (
+          <BookingIndexItem
+            key={booking.id}
+            booking={booking}
+            spot={this.props.spots[booking.spot_id] || ""}
+          />
+        );
       }
     });
 
@@ -26,9 +32,7 @@ export default class BookingIndex extends React.Component {
       <section className="booking-index-section">
         <section className="booking-index-inner">
           <h1>Trips</h1>
-          <ul className="booking-index-items">
-            { allBookings }
-          </ul>
+          <ul className="booking-index-items">{allBookings}</ul>
         </section>
       </section>
     );

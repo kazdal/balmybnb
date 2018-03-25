@@ -1,7 +1,6 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import Slider from 'react-slick';
-
+import React from "react";
+import { withRouter } from "react-router-dom";
+import Slider from "react-slick";
 
 class SpotIndexItem extends React.Component {
   constructor(props) {
@@ -10,8 +9,8 @@ class SpotIndexItem extends React.Component {
   }
 
   handleClick() {
-  // const spotId = this.props.spot.id;
-  // this.props.history.push(`/spots/${spotId}`);
+    // const spotId = this.props.spot.id;
+    // this.props.history.push(`/spots/${spotId}`);
   }
 
   slickSlider() {
@@ -24,31 +23,24 @@ class SpotIndexItem extends React.Component {
     };
 
     const slides = this.props.spot.spotImageIds.map((spotImageId, idx) => {
-          if (this.props.spotImages) {
-            return (
-              <div key={spotImageId} className="slide-wrapper">
-                <img src={this.props.spotImages[spotImageId].image_url}></img>
-              </div>
-            );
-          }
+      if (this.props.spotImages) {
+        return (
+          <div key={spotImageId} className="slide-wrapper">
+            <img src={this.props.spotImages[spotImageId].image_url} />
+          </div>
+        );
+      }
     });
-    return (
-      <Slider {...slickSettings}>
-        { slides }
-      </Slider>
-    );
+    return <Slider {...slickSettings}>{slides}</Slider>;
   }
-
 
   render() {
     const { title, description, price, location } = this.props.spot;
     return (
       <li className="spot-index-item" onClick={this.handleClick}>
-        { this.slickSlider() }
-        <h2>
-          { title }
-        </h2>
-        <p>From ${ price } per night</p>
+        {this.slickSlider()}
+        <h2>{title}</h2>
+        <p>From ${price} per night</p>
       </li>
     );
   }

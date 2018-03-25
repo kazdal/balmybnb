@@ -1,5 +1,5 @@
-import React from 'react';
-import { Range } from 'rc-slider';
+import React from "react";
+import { Range } from "rc-slider";
 
 export default class PriceFilter extends React.Component {
   constructor(props) {
@@ -27,29 +27,41 @@ export default class PriceFilter extends React.Component {
   averagePrice() {
     const spotCount = this.props.spots.length;
     let totalPrice = 0;
-    this.props.spots.forEach((spot) => totalPrice += spot.price);
+    this.props.spots.forEach(spot => (totalPrice += spot.price));
     return Math.round(totalPrice / spotCount);
   }
 
   render() {
-
     return (
       <div className="white-modal" onClick={this.props.closeModal}>
-        <div className="filter-container filter-price" onClick={e => e.stopPropagation()}>
+        <div
+          className="filter-container filter-price"
+          onClick={e => e.stopPropagation()}
+        >
           <p>
             ${this.state.minPrice} - ${this.state.maxPrice}
           </p>
 
-          <h6>The average nightly price is ${ this.averagePrice() }</h6>
+          <h6>The average nightly price is ${this.averagePrice()}</h6>
           <Range
             min={10}
             max={1250}
             allowCross={false}
             value={[this.state.minPrice, this.state.maxPrice]}
             defaultValue={[this.state.minPrice, this.state.maxPrice]}
-            onChange={this.updatePrice}/>
+            onChange={this.updatePrice}
+          />
 
-          <a onClick={() => this.handleChange(['minPrice', 'maxPrice'], [this.state.minPrice, this.state.maxPrice] )}>Apply</a>
+          <a
+            onClick={() =>
+              this.handleChange(
+                ["minPrice", "maxPrice"],
+                [this.state.minPrice, this.state.maxPrice]
+              )
+            }
+          >
+            Apply
+          </a>
         </div>
       </div>
     );

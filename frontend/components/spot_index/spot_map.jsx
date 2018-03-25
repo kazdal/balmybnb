@@ -1,5 +1,5 @@
-import React from 'react';
-import MarkerManager from '../../util/marker_manager';
+import React from "react";
+import MarkerManager from "../../util/marker_manager";
 
 export default class SpotMap extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ export default class SpotMap extends React.Component {
     this.lng = this.props.coordinates[1];
   }
 
-// lat: 34.019956, lng: -118.824270
+  // lat: 34.019956, lng: -118.824270
 
   componentDidMount() {
     // set map location
@@ -22,12 +22,13 @@ export default class SpotMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.spots);
 
-    google.maps.event.addListener(this.map, 'idle', () => {
+    google.maps.event.addListener(this.map, "idle", () => {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { lat: north, lng: east },
-        southWest: { lat: south, lng: west } };
-      this.props.updateFilter('bounds', bounds);
+        southWest: { lat: south, lng: west }
+      };
+      this.props.updateFilter("bounds", bounds);
     });
   }
 
@@ -43,7 +44,7 @@ export default class SpotMap extends React.Component {
     return (
       <section className="spot-index-right-map-section">
         <div className="spot-index-right-map">
-          <div id='map-container' ref={ map => this.mapNode = map }></div>
+          <div id="map-container" ref={map => (this.mapNode = map)} />
         </div>
       </section>
     );

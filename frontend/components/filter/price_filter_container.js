@@ -1,10 +1,10 @@
-import { connect } from 'react-redux';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { closeModal } from '../../actions/modal_actions';
-import { updateFilter } from '../../actions/filter_actions';
-import PriceFilter from './price_filter';
+import { closeModal } from "../../actions/modal_actions";
+import { updateFilter } from "../../actions/filter_actions";
+import PriceFilter from "./price_filter";
 
 const msp = state => ({
   minPrice: state.ui.filters.minPrice,

@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
-import React from 'react';
+import { connect } from "react-redux";
+import React from "react";
 
-import Search from './search';
-import { fetchSpots } from '../../actions/spot_actions';
-import { fetchSpotImages } from '../../actions/spot_image_actions';
-import { updateFilter } from '../../actions/filter_actions';
-import { receiveCoordinates } from '../../actions/coordinate_actions';
+import Search from "./search";
+import { fetchSpots } from "../../actions/spot_actions";
+import { fetchSpotImages } from "../../actions/spot_image_actions";
+import { updateFilter } from "../../actions/filter_actions";
+import { receiveCoordinates } from "../../actions/coordinate_actions";
 
 const msp = state => {
   return {
@@ -20,7 +20,7 @@ const mdp = dispatch => {
     fetchSpots: () => dispatch(fetchSpots()),
     fetchSpotImages: () => dispatch(fetchSpotImages()),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
-    receiveCoordinates: (coordinates) => dispatch(receiveCoordinates(coordinates))
+    receiveCoordinates: coordinates => dispatch(receiveCoordinates(coordinates))
   };
 };
 

@@ -1,12 +1,12 @@
-import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
-import { clearSessionErrors } from '../../actions/session_actions';
-import Nav from './nav';
+import { connect } from "react-redux";
+import { logout } from "../../actions/session_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
+import { clearSessionErrors } from "../../actions/session_actions";
+import Nav from "./nav";
 
 const msp = (state, ownProps) => {
   return {
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser
   };
 };
 

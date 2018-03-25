@@ -1,5 +1,5 @@
-import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT } from '../actions/spot_actions';
-import { merge } from 'lodash';
+import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT } from "../actions/spot_actions";
+import { merge } from "lodash";
 
 const spotsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -8,7 +8,9 @@ const spotsReducer = (state = {}, action) => {
     case RECEIVE_ALL_SPOTS:
       return action.spots;
     case RECEIVE_SPOT:
-      return merge({}, state, {[action.payload.spot.id]: action.payload.spot});
+      return merge({}, state, {
+        [action.payload.spot.id]: action.payload.spot
+      });
     default:
       return state;
   }

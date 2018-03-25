@@ -1,8 +1,11 @@
-import { merge } from 'lodash';
+import { merge } from "lodash";
 
-import { RECEIVE_ALL_SPOT_IMAGES, RECEIVE_SPOT_IMAGE } from '../actions/spot_image_actions';
+import {
+  RECEIVE_ALL_SPOT_IMAGES,
+  RECEIVE_SPOT_IMAGE
+} from "../actions/spot_image_actions";
 
-import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT } from '../actions/spot_actions';
+import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT } from "../actions/spot_actions";
 
 const spotImagesReducer = (state = {}, action) => {
   Object.freeze(state);

@@ -1,21 +1,18 @@
-export const fetchBookings = () => (
+export const fetchBookings = () =>
   $.ajax({
-    method: 'GET',
-    url: 'api/bookings'
-  })
-);
+    method: "GET",
+    url: "api/bookings"
+  });
 
-export const fetchBooking = id => (
+export const fetchBooking = id =>
   $.ajax({
-    method: 'GET',
+    method: "GET",
     url: `api/bookings/${id}`
-  })
-);
+  });
 
-export const createBooking = booking => (
+export const createBooking = booking =>
   $.ajax({
-    method: 'POST',
+    method: "POST",
     url: `api/bookings`,
     data: { booking }
-  })
-);
+  });

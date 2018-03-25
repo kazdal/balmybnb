@@ -1,7 +1,7 @@
-import * as APIUtil from '../util/spot_api_util';
+import * as APIUtil from "../util/spot_api_util";
 
-export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
-export const RECEIVE_SPOT = 'RECEIVE_SPOT';
+export const RECEIVE_ALL_SPOTS = "RECEIVE_ALL_SPOTS";
+export const RECEIVE_SPOT = "RECEIVE_SPOT";
 
 export const receiveAllSpots = spots => ({
   type: RECEIVE_ALL_SPOTS,
@@ -13,11 +13,8 @@ export const receiveSpot = payload => ({
   payload
 });
 
-export const fetchSpots = (filters) => dispatch => (
-  APIUtil.fetchSpots(filters).then(spots => (
-    dispatch(receiveAllSpots(spots))
-  ))
-);
+export const fetchSpots = filters => dispatch =>
+  APIUtil.fetchSpots(filters).then(spots => dispatch(receiveAllSpots(spots)));
 
 export const fetchSpot = id => dispatch => {
   return APIUtil.fetchSpot(id).then(payload => {
@@ -25,8 +22,5 @@ export const fetchSpot = id => dispatch => {
   });
 };
 
-export const createSpot = spot => dispatch => (
-  APIUtil.createSpot(spot).then(spot => (
-    dispatch(receiveSpot(spot))
-  ))
-);
+export const createSpot = spot => dispatch =>
+  APIUtil.createSpot(spot).then(spot => dispatch(receiveSpot(spot)));

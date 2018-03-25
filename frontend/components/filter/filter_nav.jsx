@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class FilterNav extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class FilterNav extends React.Component {
     return (
       <nav className="filter-nav">
         <ul>
-          <button onClick={ () => this.props.openModal('price') }>Price</button>
+          <button onClick={() => this.props.openModal("price")}>Price</button>
         </ul>
       </nav>
     );

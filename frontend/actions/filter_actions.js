@@ -1,7 +1,7 @@
-import { fetchSpots } from './spot_actions';
+import { fetchSpots } from "./spot_actions";
 
-export const UPDATE_FILTER = 'UPDATE_FILTER';
-export const RESET_FILTER = 'RESET_FILTER';
+export const UPDATE_FILTER = "UPDATE_FILTER";
+export const RESET_FILTER = "RESET_FILTER";
 
 export const changeFilter = (filter, value) => {
   return {

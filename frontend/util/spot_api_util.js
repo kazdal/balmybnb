@@ -1,22 +1,21 @@
-export const fetchSpots = (data) => {
+export const fetchSpots = data => {
   return $.ajax({
-    method: 'GET',
-    url: 'api/spots',
+    method: "GET",
+    url: "api/spots",
     data
   });
 };
 
 export const fetchSpot = id => {
   return $.ajax({
-    method: 'GET',
+    method: "GET",
     url: `api/spots/${id}`
   });
 };
 
-export const createSpot = spot => (
+export const createSpot = spot =>
   $.ajax({
-    method: 'POST',
-    url: 'api/spots',
+    method: "POST",
+    url: "api/spots",
     data: { spot }
-  })
-);
+  });

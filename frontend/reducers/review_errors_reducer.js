@@ -1,6 +1,7 @@
 import {
-  RECEIVE_REVIEW_ERRORS, CLEAR_REVIEW_ERRORS
-} from '../actions/review_actions';
+  RECEIVE_REVIEW_ERRORS,
+  CLEAR_REVIEW_ERRORS
+} from "../actions/review_actions";
 
 export default (state = [], action) => {
   Object.freeze(state);

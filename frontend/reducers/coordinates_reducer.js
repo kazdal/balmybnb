@@ -1,4 +1,4 @@
-import { RECEIVE_COORDINATES } from '../actions/coordinate_actions';
+import { RECEIVE_COORDINATES } from "../actions/coordinate_actions";
 
 const coordinateReducer = (state = [34.026265, -118.497149], action) => {
   switch (action.type) {

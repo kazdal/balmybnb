@@ -90,6 +90,13 @@
   align-items: center;
 }
 
+.review-index-average {
+  margin-left: 8px;
+  display: flex;
+  color: #F7CA18;
+  margin-top: 5px;
+}
+
 .review-index-item {
   min-height: 150px;
   min-height: 100px;
@@ -140,6 +147,8 @@
   font-size: 23px;
   border-bottom: 1px solid #cacccd;
   padding: 20px 0;
+  align-items: center;
+  display: flex;
 }
 
 

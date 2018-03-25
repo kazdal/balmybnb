@@ -1,21 +1,18 @@
-export const fetchSpotImages = () => (
+export const fetchSpotImages = () =>
   $.ajax({
-    method: 'GET',
-    url: 'api/spot_images'
-  })
-);
+    method: "GET",
+    url: "api/spot_images"
+  });
 
-export const fetchSpotImage = id => (
+export const fetchSpotImage = id =>
   $.ajax({
-    method: 'GET',
+    method: "GET",
     url: `api/spot_images/${id}`
-  })
-);
+  });
 
-export const createSpotImage = spot_image => (
+export const createSpotImage = spot_image =>
   $.ajax({
-    method: 'POST',
-    url: 'api/spot_images',
+    method: "POST",
+    url: "api/spot_images",
     data: { spot_image }
-  })
-);
+  });

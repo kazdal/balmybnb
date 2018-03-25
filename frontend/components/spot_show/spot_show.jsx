@@ -1,9 +1,8 @@
-import React from 'react';
-import BookingFormContainer from './booking_form_container';
-import ReviewFormContainer from './review_form_container';
-import ReviewIndexItem from './review_index_item';
-import Slider from 'react-slick';
-
+import React from "react";
+import BookingFormContainer from "./booking_form_container";
+import ReviewFormContainer from "./review_form_container";
+import ReviewIndexItem from "./review_index_item";
+import Slider from "react-slick";
 
 export default class SpotShow extends React.Component {
   constructor(props) {
@@ -20,10 +19,36 @@ export default class SpotShow extends React.Component {
     }
   }
 
+  averageRating() {
+    const reviewCount = this.props.reviews.length;
+    let allRatings = 0;
+    this.props.reviews.forEach(review => (allRatings += review.rating));
+    return Math.round(allRatings / reviewCount);
+  }
+
+  starCounter() {
+    const averageRating = this.averageRating();
+    return new Array(5).fill().map((e, i) => {
+      if (i < averageRating) {
+        return (
+          <li key={i}>
+            <i className="material-icons">star</i>
+          </li>
+        );
+      } else {
+        return (
+          <li key={{ i }}>
+            <i className="material-icons">star_border</i>
+          </li>
+        );
+      }
+    });
+  }
+
   render() {
-    const allReviews = this.props.reviews.map((review) => {
-      return <ReviewIndexItem key={ review.id } review={ review } />;
-      });
+    const allReviews = this.props.reviews.map(review => {
+      return <ReviewIndexItem key={review.id} review={review} />;
+    });
 
     let slickSettings = {
       centerMode: true,
@@ -35,43 +60,50 @@ export default class SpotShow extends React.Component {
     };
 
     if (this.props.spot !== undefined) {
-      const allImages = this.props.spot.spotImageIds.map((spotImageId) => {
-
+      const allImages = this.props.spot.spotImageIds.map(spotImageId => {
         return (
           <div key={spotImageId} className="slide-wrapper">
-            <img src={this.props.spotImages[spotImageId].image_url}></img>
+            <img src={this.props.spotImages[spotImageId].image_url} />
           </div>
-          );
-        });
+        );
+      });
     }
 
     return (
       <section className="spot-show-section">
-
-        {
-          Object.values(this.props.spotImages).length > 1 &&
-              <img className="spot-show-slider" src={this.props.spotImages[this.props.spot.spotImageIds[0]].image_url}>
-              </img>
-        }
+        {Object.values(this.props.spotImages).length > 1 && (
+          <img
+            className="spot-show-slider"
+            src={
+              this.props.spotImages[this.props.spot.spotImageIds[0]].image_url
+            }
+          />
+        )}
 
         <section className="spot-show-main">
           <div className="spot-show-words">
-            <h1 className="spot-show-header">{this.props.spot ? this.props.spot.title : ""}</h1>
+            <h1 className="spot-show-header">
+              {this.props.spot ? this.props.spot.title : ""}
+            </h1>
             <p>{this.props.spot ? this.props.spot.description : ""}</p>
 
             <ul className="review-index">
-              <h2>{ this.props.reviews.length } Reviews</h2>
-              { allReviews }
+              <h2>
+                {this.props.reviews.length} Reviews
+                <ul className="review-index-average">
+                  {this.props.reviews.length > 1 && this.starCounter()}
+                </ul>
+              </h2>
+              {allReviews}
             </ul>
-            { this.props.currentUser && <ReviewFormContainer /> }
+            {this.props.currentUser && <ReviewFormContainer />}
           </div>
-          <BookingFormContainer spot={ this.props.spot ? this.props.spot : "" }/>
+          <BookingFormContainer spot={this.props.spot ? this.props.spot : ""} />
         </section>
       </section>
     );
   }
 }
-
 
 // {
 //   Object.values(this.props.spotImages).length > 1 &&
