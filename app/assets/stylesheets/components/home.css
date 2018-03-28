@@ -113,7 +113,7 @@
 }
 
 .home-search-bar {
-  width: 116%;
+  width: 820px;
   outline: none;
   height: 70px;
   border: none;
@@ -148,7 +148,7 @@
   border-radius: 4px;
   position: absolute;
   top: 30px;
-  right: -100px;
+  right: 12px;
 }
 
 .pac-item {
