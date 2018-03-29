@@ -18,6 +18,8 @@ const Search = ({
       spotImages={spotImages}
       fetchSpots={fetchSpots}
       fetchSpotImages={fetchSpotImages}
+      receiveCoordinates={receiveCoordinates}
+      
     />
     <SpotMap
       spots={spots}

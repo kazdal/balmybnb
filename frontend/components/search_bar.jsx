@@ -19,8 +19,6 @@ class SearchBar extends React.Component {
     this.setState({ address: address });
   }
 
-  autocomplete() {}
-
   componentDidMount() {
     const input = document.getElementsByClassName("home-search-bar")[0];
     const autocomplete = new google.maps.places.Autocomplete(input);

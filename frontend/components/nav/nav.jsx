@@ -55,8 +55,8 @@ export default class Nav extends React.Component {
           <li>
             <a>Help</a>
           </li>
-          <li className="nav-pic-container" onClick={() => this.toggleClass()}>
-            <a>
+          <li className="nav-pic-container" onClick={() => this.toggleClass()} >
+            <a >
               <img
                 className="nav-picture"
                 alt="Profile picture"

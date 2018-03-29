@@ -265,11 +265,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  background-image: url(https://s3.amazonaws.com/balmybnb-dev/california.jpeg);
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/malibu.jpeg);
 }
 
 .home-explore-mosaic > .california > h3 {
-  text-shadow: 6px 2px 40px rgb(22, 23, 31);
+  /* text-shadow: 6px 2px 40px rgb(22, 23, 31); */
 }
 
 .miami {
