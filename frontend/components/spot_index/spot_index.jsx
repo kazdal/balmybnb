@@ -23,7 +23,6 @@ export default class SpotIndex extends React.Component {
     let geocoder = new google.maps.Geocoder();
     geocoder.geocode({ latLng: latlng }, (results, status) => {
       if (status === google.maps.GeocoderStatus.OK) {
-        debugger
         this.place = results[0].address_components[4].long_name || results[2].address_components[0].long_name ||
         results[0].address_components[4].short_name;
       }

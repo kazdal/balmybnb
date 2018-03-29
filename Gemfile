@@ -7,12 +7,10 @@ end
 
 gem 'better_errors'
 gem 'binding_of_caller'
-gem 'pry-rails'
 gem 'annotate'
 gem 'bcrypt'
 gem 'jquery-rails'
 gem 'jquery'
-gem 'faker'
 gem 'figaro'
 gem 'aws-sdk', '< 3.0'
 gem "paperclip", '~> 5.0.0'
@@ -47,11 +45,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

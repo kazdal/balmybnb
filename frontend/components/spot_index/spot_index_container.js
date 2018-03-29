@@ -6,7 +6,6 @@
 // import { fetchSpotImages } from '../../actions/spot_image_actions';
 //
 // const msp = state => {
-//   debugger
 //   return {
 //     spots: Object.assign([], state.entities.spots),
 //     spotImages: state.entities.spot_images
@@ -14,7 +13,6 @@
 // };
 //
 // const mdp = dispatch => {
-//   debugger
 //   return {
 //     fetchSpotImages: () => dispatch(fetchSpotImages())
 //   };

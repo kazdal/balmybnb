@@ -23,7 +23,6 @@ export default class SpotMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.spots);
 
     google.maps.event.addListener(this.map, "idle", () => {
-      debugger
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { lat: north, lng: east },
@@ -37,7 +36,6 @@ export default class SpotMap extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.coordinates !== nextProps.coordinates) {
-      debugger
       const mapOptions = {
         center: {
           lat: nextProps.coordinates[0],

@@ -9,7 +9,6 @@ export default class SpotIndexItem extends React.Component {
 
   render() {
     const { booking, spot, spotImages } = this.props;
-    debugger
 
     return (
       <li className="booking-index-item">
