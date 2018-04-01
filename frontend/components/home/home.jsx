@@ -52,16 +52,16 @@ class Home extends React.Component {
 
             <div
               className="home-explore-mosaic-2x panama"
-              onClick={() => this.handleExploreMosaic(32.712113, -117.192017)}
+              onClick={() => this.handleExploreMosaic(21.462437, -157.965161)}
             >
-              <h3>Panama</h3>
+              <h3>Hawaii</h3>
             </div>
 
             <div
               className="home-explore-mosaic-2x maldives"
-              onClick={() => this.handleExploreMosaic(-0.00413, 73.321958)}
+              onClick={() => this.handleExploreMosaic(-8.561893, 115.211785)}
             >
-              <h3>Maldives</h3>
+              <h3>Bali</h3>
             </div>
           </section>
         </section>
