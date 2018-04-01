@@ -27,7 +27,6 @@ export default class SpotShow extends React.Component {
   }
 
   starCounter() {
-    debugger
     const averageRating = this.averageRating();
     return new Array(5).fill().map((e, i) => {
       if (i < averageRating) {

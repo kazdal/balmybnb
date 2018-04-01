@@ -48,7 +48,6 @@ class SpotIndexItem extends React.Component {
 
   starCounter() {
     const averageRating = this.averageRating();
-    debugger;
     return new Array(5).fill().map((e, i) => {
       if (i < averageRating) {
         return (
