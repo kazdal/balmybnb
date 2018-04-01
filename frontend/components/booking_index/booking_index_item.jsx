@@ -23,10 +23,10 @@ export default class SpotIndexItem extends React.Component {
             {moment(booking.end_date).format("MMM Do YYYY")}
           </p>
           <Link to={`/spots/${spot.id}`}>
-            <p>{spot.title}</p>
           </Link>
         </div>
       </li>
     );
   }
 }
+// <p>{spot.title}</p>
