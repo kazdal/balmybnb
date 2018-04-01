@@ -5,8 +5,10 @@ import SpotIndex from "./spot_index";
 const Search = ({
   spots,
   spotImages,
+  reviews,
   fetchSpots,
   fetchSpotImages,
+  fetchReviews,
   updateFilter,
   coordinates,
   receiveCoordinates
@@ -16,10 +18,12 @@ const Search = ({
       spots={spots}
       coordinates={coordinates}
       spotImages={spotImages}
+      reviews={reviews}
       fetchSpots={fetchSpots}
       fetchSpotImages={fetchSpotImages}
+      fetchReviews={fetchReviews}
       receiveCoordinates={receiveCoordinates}
-      
+
     />
     <SpotMap
       spots={spots}

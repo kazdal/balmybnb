@@ -27,17 +27,18 @@ export default class SpotShow extends React.Component {
   }
 
   starCounter() {
+    debugger
     const averageRating = this.averageRating();
     return new Array(5).fill().map((e, i) => {
       if (i < averageRating) {
         return (
-          <li key={i}>
+          <li key={i * this.props.spot.id}>
             <i className="material-icons">star</i>
           </li>
         );
       } else {
         return (
-          <li key={{ i }}>
+          <li key={i * this.props.spot.id}>
             <i className="material-icons">star_border</i>
           </li>
         );

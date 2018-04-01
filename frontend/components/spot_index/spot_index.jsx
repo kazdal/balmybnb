@@ -9,7 +9,9 @@ export default class SpotIndex extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchSpotImages();
+    this.props.fetchReviews();
   }
 
   // componentWillUpdate(nextProps) {
@@ -23,13 +25,13 @@ export default class SpotIndex extends React.Component {
     let geocoder = new google.maps.Geocoder();
     geocoder.geocode({ latLng: latlng }, (results, status) => {
       if (status === google.maps.GeocoderStatus.OK) {
-        this.place = results[0].address_components[4].long_name || results[2].address_components[0].long_name ||
-        results[0].address_components[4].short_name;
+        this.place =
+          results[0].address_components[4].long_name ||
+          results[2].address_components[0].long_name ||
+          results[0].address_components[4].short_name;
       }
     });
   }
-
-
 
   // geocoder.geocode({ address: this.state.address }, (results, status) => {
   //   if (status === google.maps.GeocoderStatus.OK) {
@@ -53,7 +55,8 @@ export default class SpotIndex extends React.Component {
           <SpotIndexItem
             key={spot.id}
             spot={spot}
-            spotImages={ allImages }
+            spotImages={allImages}
+            reviews={this.props.reviews}
           />
         </Link>
       );
@@ -66,7 +69,7 @@ export default class SpotIndex extends React.Component {
         <div className="spot-index-header">
           <h1>
             <CountUp useEasing={true} start={0} end={spotCount} duration={2} />{" "}
-              balmybnb homes
+            balmybnb homes
           </h1>
           <p>
             Explore homes verified for quality & comfort in cities around the

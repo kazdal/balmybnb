@@ -90,10 +90,36 @@
 
 .spot-index-item > p:first-of-type {
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 2px;
 }
 
+.spot-index-review-stars {
+  display: flex;
+  color: #F7CA18;
+  font-size: 16px;
+  padding-top: 2px;
+}
+
+.spot-index-review-stars > li > i {
+  font-size: 14px;
+}
+
+.spot-index-review-stars > div {
+  color: black;
+}
+
+.spot-index-item-review-line {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.spot-index-item-review-line > div {
+  margin-left: 3px;
+  font-size: 14px;
+}
 
 /* classes to apply for fixed nav-bar and filter nav when on spots page */
 

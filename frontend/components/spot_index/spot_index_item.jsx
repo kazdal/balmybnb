@@ -23,7 +23,6 @@ class SpotIndexItem extends React.Component {
     };
 
     const slides = this.props.spot.spotImageIds.map((spotImageId, idx) => {
-
       if (this.props.spotImages.length !== 0) {
         return (
           <div key={spotImageId} className="slide-wrapper">
@@ -35,6 +34,38 @@ class SpotIndexItem extends React.Component {
     return <Slider {...slickSettings}>{slides}</Slider>;
   }
 
+  averageRating() {
+    const spotReviews = this.props.reviews.filter(review =>
+      this.props.spot.reviewIds.includes(review.id)
+    );
+    const reviewCount = spotReviews.length;
+    let allRatings = 0;
+    spotReviews.forEach(review => {
+      allRatings += review.rating;
+    });
+    return Math.round(allRatings / reviewCount);
+  }
+
+  starCounter() {
+    const averageRating = this.averageRating();
+    debugger;
+    return new Array(5).fill().map((e, i) => {
+      if (i < averageRating) {
+        return (
+          <li key={i * this.props.spot.id}>
+            <i className="material-icons">star</i>
+          </li>
+        );
+      } else {
+        return (
+          <li key={i * this.props.spot.id}>
+            <i className="material-icons">star_border</i>
+          </li>
+        );
+      }
+    });
+  }
+
   render() {
     const { title, description, price, location } = this.props.spot;
     return (
@@ -42,6 +73,10 @@ class SpotIndexItem extends React.Component {
         {this.slickSlider()}
         <h2>{title}</h2>
         <p>From ${price} per night</p>
+        <div className="spot-index-item-review-line">
+          <ul className="spot-index-review-stars">{this.starCounter()}</ul>
+          <div>{this.averageRating()}</div>
+        </div>
       </li>
     );
   }
