@@ -29,8 +29,6 @@ export default class SpotMap extends React.Component {
         southWest: { lat: south, lng: west }
       };
       this.props.updateFilter("bounds", bounds);
-      // const center = this.map.getCenter();
-      // this.props.receiveCoordinates(center.lat(), center.lng());
     });
   }
 
@@ -53,9 +51,6 @@ export default class SpotMap extends React.Component {
           southWest: { lat: south, lng: west }
         };
         this.props.updateFilter("bounds", bounds);
-
-        // const center = this.map.getCenter();
-        // this.props.receiveCoordinates(center.lat(), center.lng());
       });
     }
   }

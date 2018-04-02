@@ -45,6 +45,7 @@ export default class SpotShow extends React.Component {
     });
   }
 
+
   render() {
     const allReviews = this.props.reviews.map(review => {
       return <ReviewIndexItem key={review.id} review={review} />;
@@ -60,7 +61,7 @@ export default class SpotShow extends React.Component {
     };
 
     if (this.props.spot !== undefined) {
-      const allImages = this.props.spot.spotImageIds.map(spotImageId => {
+      this.allImages = this.props.spot.spotImageIds.map(spotImageId => {
         return (
           <div key={spotImageId} className="slide-wrapper">
             <img src={this.props.spotImages[spotImageId].image_url} />
@@ -69,17 +70,15 @@ export default class SpotShow extends React.Component {
       });
     }
 
+    debugger
     return (
       <section className="spot-show-section">
-        {Object.values(this.props.spotImages).length > 1 && (
-          <img
-            className="spot-show-slider"
-            src={
-              this.props.spotImages[this.props.spot.spotImageIds[0]].image_url
-            }
-          />
-        )}
-
+        {
+          Object.values(this.props.spotImages).length > 1 &&
+          <Slider {...slickSettings}>
+            { this.allImages }
+          </Slider>
+        }
         <section className="spot-show-main">
           <div className="spot-show-words">
             <h1 className="spot-show-header">
@@ -105,15 +104,11 @@ export default class SpotShow extends React.Component {
   }
 }
 
-// {
-//   Object.values(this.props.spotImages).length > 1 &&
-//   <Slider {...slickSettings}>
-//     { this.allImages }
-//     <div key={1} className="slide-wrapper">
-//       <img className="spot-show-slider" src={this.props.spotImages[1].image_url}></img>
-//     </div>
-//     <div key={2} className="slide-wrapper">
-//       <img src={this.props.spotImages[1].image_url}></img>
-//     </div>
-//   </Slider>
-// }
+// {Object.values(this.props.spotImages).length > 1 && (
+//   <img
+//     className="spot-show-slider"
+//     src={
+//       this.props.spotImages[this.props.spot.spotImageIds[0]].image_url
+//     }
+//   />
+// )}

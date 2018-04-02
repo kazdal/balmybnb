@@ -6,10 +6,18 @@
   color: #484848;
 }
 
+.spot-show-section .slide-wrapper {
+  height: 550px;
+}
+
+.spot-show-section .slick-list {
+  padding: 0;
+}
+
 .spot-show-slider {
   max-height: 800px;
   width: 60%;
-  /* width: 50%; */
+  width: 54%;
   /* background-color: #F1A9A0; */
   object-fit: cover;
 }
