@@ -70,7 +70,6 @@ export default class SpotShow extends React.Component {
       });
     }
 
-    debugger
     return (
       <section className="spot-show-section">
         {
