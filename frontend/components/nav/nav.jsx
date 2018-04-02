@@ -43,18 +43,11 @@ export default class Nav extends React.Component {
     return (
       <nav>
         <ul className="nav-items">
-          <li>
-            <a>Become a host</a>
-          </li>
-          <li>
-            <a>Saved</a>
-          </li>
+
           <li>
             <Link to="/bookings">Trips</Link>
           </li>
-          <li>
-            <a>Help</a>
-          </li>
+
           <li className="nav-pic-container" onClick={() => this.toggleClass()} >
             <a >
               <img
@@ -79,12 +72,8 @@ export default class Nav extends React.Component {
     return (
       <nav>
         <ul className="nav-items">
-          <li>
-            <a>Become a host</a>
-          </li>
-          <li>
-            <a>Help</a>
-          </li>
+
+
           <li onClick={() => this.handleModal("signup")}>
             <a>Sign Up</a>
           </li>
