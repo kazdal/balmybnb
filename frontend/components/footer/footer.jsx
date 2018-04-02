@@ -17,8 +17,10 @@ export default class Footer extends React.Component {
 
           <ul className="footer-right">
             <li>
-              made by
-              <img src="https://s3.amazonaws.com/balmybnb-dev/dkvng.png" />
+              <a href="http://dkang.me" className="footer-portfolio">
+                made by
+                <img src="https://s3.amazonaws.com/balmybnb-dev/dkvng.png" />
+              </a>
             </li>
             <li>
               <a href="https://www.github.com/dkvng">

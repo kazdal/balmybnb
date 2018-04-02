@@ -4,6 +4,14 @@
   border-color: rgb(118, 118, 118);
 }
 
+.footer-portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #484848;
+}
+
 .page-footer section {
   display: flex;
   justify-content: flex-end;
