@@ -133,7 +133,7 @@ class ReviewForm extends React.Component {
         </label>
 
         <input
-          className="session-submit width-35 flex-three"
+          className="session-submit width-35 flex-three review-submit"
           type="submit"
           value="Leave Review"
         />

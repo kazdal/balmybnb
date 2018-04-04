@@ -27,12 +27,8 @@ export default class BookingIndex extends React.Component {
   }
 
   render() {
-    // const orderedBookings = this.props.bookings.sort(function(a, b) {
-    //   return a.start_date - b.start_date;
-    // });
 
     let pastBookings = [];
-    debugger;
     let upcomingBookings = [];
     this.props.orderedBookings.forEach(booking => {
       if (booking.user_id === this.props.currentUserId) {
@@ -44,7 +40,6 @@ export default class BookingIndex extends React.Component {
       }
     });
 
-    debugger
     return (
       <section className="booking-index-section">
         <section className="booking-index-inner">

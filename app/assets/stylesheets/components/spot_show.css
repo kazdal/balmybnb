@@ -87,6 +87,10 @@
   box-sizing: unset;
 }
 
+.review-submit {
+  width: 170px;
+}
+
 .review-form > label > textarea {
   height: 145px;
   resize: none;

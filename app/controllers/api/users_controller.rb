@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
-    @user.image_url ||= 'default.jpg'
+    @user.image_url ||= 'https://a0.muscache.com/defaults/user_pic-50x50.png?v=3'
     if @user.save
       login(@user)
       render "api/users/show"
