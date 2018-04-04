@@ -15,39 +15,36 @@ export default class BookingIndex extends React.Component {
 
   bookingIndexItem(booking) {
     if (booking) {
-      return(
+      return (
         <BookingIndexItem
           key={booking.id}
           booking={booking}
           spot={this.props.spots[booking.spot_id] || ""}
           spotImages={this.props.spotImages}
-          />
+        />
       );
     }
   }
 
   render() {
-    const orderedBookings = this.props.bookings.sort(function(a, b) {
-      return a.start_date > b.start_date;
-    });
+    // const orderedBookings = this.props.bookings.sort(function(a, b) {
+    //   return a.start_date - b.start_date;
+    // });
 
     let pastBookings = [];
+    debugger;
     let upcomingBookings = [];
-
-    orderedBookings.forEach((booking) => {
+    this.props.orderedBookings.forEach(booking => {
       if (booking.user_id === this.props.currentUserId) {
         if (moment() < moment(booking.start_date)) {
-          upcomingBookings.push(
-          this.bookingIndexItem(booking)
-        );
+          upcomingBookings.push(this.bookingIndexItem(booking));
         } else {
-          pastBookings.push(
-            this.bookingIndexItem(booking)
-          );
+          pastBookings.push(this.bookingIndexItem(booking));
         }
       }
     });
 
+    debugger
     return (
       <section className="booking-index-section">
         <section className="booking-index-inner">
