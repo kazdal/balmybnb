@@ -42,7 +42,11 @@ export default class PriceFilter extends React.Component {
             ${this.state.minPrice} - ${this.state.maxPrice}
           </p>
 
-          <h6>The average nightly price is ${this.averagePrice()}</h6>
+          {
+            this.props.spots.length > 0 ?
+            <h6>The average nightly price is ${this.averagePrice()}</h6> :
+            <h6>No spots in range</h6>
+          }
           <Range
             min={10}
             max={1250}
