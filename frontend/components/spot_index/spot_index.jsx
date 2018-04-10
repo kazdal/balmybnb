@@ -9,6 +9,7 @@ export default class SpotIndex extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchSpotImages();
     this.props.fetchReviews();
   }
