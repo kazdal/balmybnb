@@ -1,15 +1,17 @@
 # balmybnb
-#### [Live Link](http://balmybnb.herokuapp.com) ☀️ 😎 
+#### [Live Link](http://balmybnb.herokuapp.com) ☀️ 😎
 
 balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux frontend with a Ruby on Rails backend and a PostgreSQL database. balmybnb focuses on warm climates around the world.
 
 ![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/home-screen.png)
 
 ##### Technologies used
+1. Javascript
 1. Ruby on Rails for backend
-2. HTML
-3. CSS
-4. Javascript
+1. PostgreSQL
+1. HTML
+1. CSS
+
 
 ##### Libraries used:
 * React.js
@@ -18,7 +20,7 @@ balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux 
 * React-Dates - AirBnB engineering's own calendar library
 * React-Slick - image carousel
 * figaro to securely store keys
-* Google Map API & geocoder
+* Google Map API & Google Places Autocomplete
 * Bcrypt for user authorization
 * paperclip to store spot and user profile images using AWS
 
