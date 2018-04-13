@@ -26,16 +26,14 @@
 }
 
 .spot-index-left-items > ul > a {
-    color: inherit;
-    font-style: normal;
-    text-decoration: none;
-    width: 33.33%;
-    max-height: 400px;
-    max-width: 390px;
-    margin: 0 8px;
+  color: inherit;
+  font-style: normal;
+  text-decoration: none;
+  max-height: 400px;
+  max-width: 390px;
 
-    /* iffy */
-    width: 32.33%;
+  margin: 0 0.75%;
+  width: 32.33%;
 }
 
 .spot-index-header > h1 {
