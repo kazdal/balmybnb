@@ -3,7 +3,7 @@
 
 balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux frontend with a Ruby on Rails backend and a PostgreSQL database. balmybnb focuses on warm climates around the world.
 
-![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/home-screen.png)
+![](https://media.giphy.com/media/69sRU1Lc6iz9Tx58Zc/source.mp4)
 
 ##### Technologies used
 1. Javascript
