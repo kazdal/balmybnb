@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../session_form/signup_form_container";
 import PriceFilterContainer from "../filter/price_filter_container";
+import UserDropdown from "../nav/user_dropdown";
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -19,6 +20,9 @@ function Modal({ modal, closeModal }) {
       break;
     case "price":
       component = <PriceFilterContainer />;
+      break;
+    case "userDropdown":
+      component = <UserDropdown />;
       break;
     default:
       return null;

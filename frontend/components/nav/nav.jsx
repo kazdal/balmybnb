@@ -6,56 +6,28 @@ import SearchBar from "../search_bar";
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      active: false
-    };
-    this.toggleClass = this.toggleClass.bind(this);
   }
 
-  toggleClass() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
-  }
 
-  componentDidMount() {
-    document.addEventListener("click", e => {
-      if (
-        !Object.assign([], e.target.classList).includes("nav-picture") &&
-        this.state.active === true
-      ) {
-        this.toggleClass();
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("click", e => {
-      if (
-        !Object.assign([], e.target.classList).includes("nav-picture") &&
-        this.state.active === true
-      ) {
-        this.toggleClass();
-      }
-    });
-  }
 
   signedInNav() {
     return (
       <nav>
         <ul className="nav-items">
-
           <li>
             <Link to="/bookings">Trips</Link>
           </li>
 
-          <li className="nav-pic-container" onClick={() => this.toggleClass()} >
-            <a >
+          <li
+            className="nav-pic-container"
+            onClick={() => this.handleModal("userDropdown")}
+          >
+            <a>
               <img
                 className="nav-picture"
                 alt="Profile picture"
-                src={ this.props.currentUser.image_url }
+                src={this.props.currentUser.image_url}
               />
-              {this.userDropdown()}
             </a>
           </li>
         </ul>
@@ -72,8 +44,6 @@ export default class Nav extends React.Component {
     return (
       <nav>
         <ul className="nav-items">
-
-
           <li onClick={() => this.handleModal("signup")}>
             <a>Sign Up</a>
           </li>
@@ -85,24 +55,24 @@ export default class Nav extends React.Component {
     );
   }
 
-  userDropdown() {
-    return (
-      <ul
-        className={
-          this.state.active
-            ? "nav-user-dropdown-show nav-user-dropdown"
-            : "nav-user-dropdown"
-        }
-      >
-        <li
-          className="nav-user-dropdown-logout"
-          onClick={() => this.props.logout()}
-        >
-          Log Out
-        </li>
-      </ul>
-    );
-  }
+  // userDropdown() {
+  //   return (
+  //     <ul
+  //       className={
+  //         this.state.active
+  //           ? "nav-user-dropdown-show nav-user-dropdown"
+  //           : "nav-user-dropdown"
+  //       }
+  //     >
+  //       <li
+  //         className="nav-user-dropdown-logout"
+  //         onClick={() => this.props.logout()}
+  //       >
+  //         Log Out
+  //       </li>
+  //     </ul>
+  //   );
+  // }
 
   render() {
     const spotsFilter =
