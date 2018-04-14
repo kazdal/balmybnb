@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../search_bar";
 import { connect } from "react-redux";
-import { receiveCoordinates } from "../../actions/coordinate_actions";
 import { withRouter } from "react-router-dom";
 
 class Home extends React.Component {
@@ -11,8 +10,7 @@ class Home extends React.Component {
   }
 
   handleExploreMosaic(lat, lng) {
-    this.props.receiveCoordinates([lat, lng]);
-    this.props.history.push("/spots");
+    this.props.history.push(`/spots?lat=${lat}&lng=${lng}`);
   }
 
   render() {
@@ -84,7 +82,6 @@ class Home extends React.Component {
 const msp = state => ({});
 
 const mdp = dispatch => ({
-  receiveCoordinates: coords => dispatch(receiveCoordinates(coords))
 });
 
 export default withRouter(connect(msp, mdp)(Home));

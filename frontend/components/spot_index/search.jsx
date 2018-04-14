@@ -11,7 +11,6 @@ const Search = ({
   fetchReviews,
   updateFilter,
   coordinates,
-  receiveCoordinates
 }) => (
   <section className="spot-index-main">
     <SpotIndex
@@ -22,7 +21,6 @@ const Search = ({
       fetchSpots={fetchSpots}
       fetchSpotImages={fetchSpotImages}
       fetchReviews={fetchReviews}
-      receiveCoordinates={receiveCoordinates}
 
     />
     <SpotMap
@@ -30,7 +28,6 @@ const Search = ({
       coordinates={coordinates}
       fetchSpots={fetchSpots}
       updateFilter={updateFilter}
-      receiveCoordinates={receiveCoordinates}
     />
   </section>
 );

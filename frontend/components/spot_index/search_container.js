@@ -6,7 +6,6 @@ import { fetchSpots } from "../../actions/spot_actions";
 import { fetchSpotImages } from "../../actions/spot_image_actions";
 import { fetchReviews } from "../../actions/review_actions";
 import { updateFilter } from "../../actions/filter_actions";
-import { receiveCoordinates } from "../../actions/coordinate_actions";
 
 const msp = state => {
   return {
@@ -23,7 +22,6 @@ const mdp = dispatch => {
     fetchSpotImages: () => dispatch(fetchSpotImages()),
     fetchReviews: () => dispatch(fetchReviews()),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
-    receiveCoordinates: coordinates => dispatch(receiveCoordinates(coordinates))
   };
 };
 

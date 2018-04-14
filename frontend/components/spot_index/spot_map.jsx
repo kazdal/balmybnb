@@ -1,16 +1,21 @@
 import React from "react";
 import MarkerManager from "../../util/marker_manager";
+import { withRouter } from "react-router-dom";
 
-export default class SpotMap extends React.Component {
+class SpotMap extends React.Component {
   constructor(props) {
     super(props);
-    this.lat = this.props.coordinates[0];
-    this.lng = this.props.coordinates[1];
+    // this.lat = this.props.coordinates[0];
+    // this.lng = this.props.coordinates[1];
   }
 
   // lat: 34.019956, lng: -118.824270
 
   componentDidMount() {
+    const query = this.props.location.search;
+    const search = new URLSearchParams(query);
+    this.lat = parseFloat(search.get("lat"));
+    this.lng = parseFloat(search.get("lng"));
     // set map location
     const mapOptions = {
       center: { lat: this.lat, lng: this.lng },
@@ -33,13 +38,21 @@ export default class SpotMap extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.coordinates !== nextProps.coordinates) {
+    const oldLat = this.lat;
+    const oldLng = this.lng;
+
+    const query = this.props.location.search;
+    const search = new URLSearchParams(query);
+    this.lat = parseFloat(search.get("lat"));
+    this.lng = parseFloat(search.get("lng"));
+    if (this.lat !== oldLat || this.lng !== oldLng ) {
       const mapOptions = {
         center: {
-          lat: nextProps.coordinates[0],
-          lng: nextProps.coordinates[1] },
+          lat: this.lat,
+          lng: this.lng },
         zoom: 10
-      };
+    };
+
       this.map = new google.maps.Map(this.mapNode, mapOptions);
       this.MarkerManager = new MarkerManager(this.map);
       this.MarkerManager.updateMarkers(this.props.spots);
@@ -73,3 +86,5 @@ export default class SpotMap extends React.Component {
     );
   }
 }
+
+export default withRouter(SpotMap);
