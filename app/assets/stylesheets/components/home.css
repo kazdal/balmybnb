@@ -149,6 +149,10 @@
   right: 12px;
 }
 
+.home-search-button:hover {
+  cursor: pointer;
+}
+
 .pac-item {
   font-family: 'Open Sans';
   font-size: 18px;

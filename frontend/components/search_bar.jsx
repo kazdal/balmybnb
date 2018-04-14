@@ -71,7 +71,7 @@ class SearchBar extends React.Component {
         onSubmit={e => this.handleSubmit(e)}
         className="home-search-bar-form"
       >
-        <div className="home-search-bar-wrapper">
+        <form className="home-search-bar-wrapper" onSubmit={e => this.handleSubmit(e)}>
           <input
             onChange={this.update("address")}
             type="text"
@@ -79,9 +79,9 @@ class SearchBar extends React.Component {
             placeholder="Try 'Los Angeles'"
             className="home-search-bar"
           />
-          <input type="submit" value="Search" className="home-search-button" />
+          <input type="submit" value="Search" className="home-search-button"   />
           <i className="material-icons">search</i>
-        </div>
+        </form>
       </div>
     );
   }
