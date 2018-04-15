@@ -5,12 +5,10 @@ import { withRouter } from "react-router-dom";
 class SpotMap extends React.Component {
   constructor(props) {
     super(props);
-    // this.lat = this.props.coordinates[0];
-    // this.lng = this.props.coordinates[1];
   }
 
   // lat: 34.019956, lng: -118.824270
-
+  
   componentDidMount() {
     const query = this.props.location.search;
     const search = new URLSearchParams(query);

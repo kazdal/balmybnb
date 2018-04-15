@@ -30,3 +30,9 @@
   input, textarea {
     font-family: 'Open Sans';
   }
+
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
