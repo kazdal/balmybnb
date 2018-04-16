@@ -28,7 +28,7 @@ export default class Footer extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/dakang">
+              <a href="https://www.linkedin.com/in/dkvng">
                 <i className="fab fa-linkedin-in" />
               </a>
             </li>
