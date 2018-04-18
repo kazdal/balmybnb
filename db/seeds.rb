@@ -56,7 +56,7 @@
 
   Spot.create(title: 'West LA apartment', description: 'Sunny Los Angeles place with great access to other places. Sunny Los Angeles place with great access to other places. Sunny Los Angeles place with great access to other places. Sunny Los Angeles place with great access to other places. Sunny Los Angeles place with great access to other places. Sunny Los Angeles place with great access to other places', price: 50, lat: 34.045061, lng: -118.431662)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/c.jpeg", spot_id: Spot.third.id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/sss.jpg", spot_id: Spot.third.id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/sss.jpeg", spot_id: Spot.third.id )
 
     Booking.create(start_date: '12-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.third.id)
     Booking.create(start_date: '22-04-2018', end_date: '25-04-2018', user_id: User.fourth.id, spot_id: Spot.third.id)
@@ -69,7 +69,7 @@
 
 
   Spot.create(title: 'Santa Monica Home', description: 'Sunny Santa Monica. We have hosted over 500 guests! All love our close proximity to the beach and the great food scene nearby. Ask us if you have any questions!', price: 234, lat: 34.024843, lng: -118.507535)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/sss.jpg", spot_id: Spot.fourth.id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/sss.jpeg", spot_id: Spot.fourth.id )
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/c.jpeg", spot_id: Spot.fourth.id )
 
     Booking.create(start_date: '12-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.fourth.id)
@@ -97,7 +97,7 @@
     Review.create(title: 'What a great place', body: 'Everything was perfect! We had a nice bedroom, delicious breakfast every morning and the house has a very nice pool area. It is close to everything.', rating: 4, spot_id: Spot.fifth.id, user_id: User.first.id)
 
   Spot.create(title: 'Beach House', description: 'A beach house. Solid living space for close proximity to everything you need. Do not hesitate to ask about any accomodation request' , price: 858, lat: 34.027081, lng: -118.509449)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/manning.jpg", spot_id: Spot.find(6).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/manning.jpeg", spot_id: Spot.find(6).id )
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/c.jpeg", spot_id: Spot.find(6).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.find(6).id)
@@ -112,7 +112,7 @@
 
   Spot.create(title: 'Manhattan Beach Home', description: 'One of the best beaches in the US. Visit the beach when you are here we are so close. The sunny weather and calming sea will be great for any of your travel purposes.', price: 575, lat: 33.889120, lng: -118.413420)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/ruballo.jpeg", spot_id: Spot.find(7).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/c.jpeg", spot_id: Spot.find(7).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/kitchen5.jpeg", spot_id: Spot.find(7).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '19-04-2018', user_id: User.fourth.id, spot_id: Spot.find(7).id)
     Booking.create(start_date: '23-04-2018', end_date: '27-05-2018', user_id: User.third.id, spot_id: Spot.find(7).id)
@@ -160,8 +160,8 @@
 
   Spot.create(title: 'Perfect Location!', description: 'High in the sky and with stunning area, river or mountain views from every window, this beachside sub-penthouse is spacious and filled with radiant natural light. From the two North facing balconies you can relax and listen to the peaceful sounds of the waves breaking on the shore.',
     price: 425, lat: -28.047530, lng: 153.367836)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpg", spot_id: Spot.find(10).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach9.jpg", spot_id: Spot.find(10).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpeg", spot_id: Spot.find(10).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach9.jpeg", spot_id: Spot.find(10).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '10-04-2018', user_id: User.second.id, spot_id: Spot.find(10).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.first.id, spot_id: Spot.find(10).id)
@@ -213,7 +213,7 @@
   Spot.create(title: 'Luxury Beach Apartment', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 231, lat: 25.815021, lng: -80.129815)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living4.jpeg", spot_id: Spot.find(13).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach6.jpg", spot_id: Spot.find(13).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach6.jpeg", spot_id: Spot.find(13).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.second.id, spot_id: Spot.find(13).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.find(13).id)
@@ -246,7 +246,7 @@
 
   Spot.create(title: 'Cozy Apartment!', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 524, lat: 25.813993, lng: -80.122559)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpg", spot_id: Spot.find(15).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpeg", spot_id: Spot.find(15).id )
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach1.jpeg", spot_id: Spot.find(15).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.third.id, spot_id: Spot.find(15).id)
@@ -264,7 +264,7 @@
   Spot.create(title: 'Apartment close to South Beach', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 625, lat: 25.773390, lng: -80.132738)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living.jpeg", spot_id: Spot.find(16).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach6.jpg", spot_id: Spot.find(16).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach6.jpeg", spot_id: Spot.find(16).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.third.id, spot_id: Spot.find(16).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.third.id, spot_id: Spot.find(16).id)
@@ -281,7 +281,7 @@
   Spot.create(title: 'Villa right on the Beach', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 999, lat: 25.788477, lng: -80.130029)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach7.jpeg", spot_id: Spot.find(17).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpg", spot_id: Spot.find(17).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpeg", spot_id: Spot.find(17).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.third.id, spot_id: Spot.find(17).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.third.id, spot_id: Spot.find(17).id)
@@ -298,7 +298,7 @@
   Spot.create(title: 'Downtown Miami', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 800, lat: 25.784277, lng: -80.190995)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living2.jpeg", spot_id: Spot.find(18).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach9.jpg", spot_id: Spot.find(18).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach9.jpeg", spot_id: Spot.find(18).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.third.id, spot_id: Spot.find(18).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.third.id, spot_id: Spot.find(18).id)
@@ -316,8 +316,8 @@
 
   Spot.create(title: 'Downtown Honolulu Stay', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 790, lat: 21.285877, lng: -157.838643)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpg", spot_id: Spot.find(19).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpg", spot_id: Spot.find(19).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpeg", spot_id: Spot.find(19).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpeg", spot_id: Spot.find(19).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.third.id, spot_id: Spot.find(19).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.third.id, spot_id: Spot.find(19).id)
@@ -369,7 +369,7 @@
   Spot.create(title: 'Large House near Hanauma', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 500, lat: 21.265411, lng: -157.710333)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/kitchen2.jpeg", spot_id: Spot.find(22).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpg", spot_id: Spot.find(22).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpeg", spot_id: Spot.find(22).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.third.id, spot_id: Spot.find(22).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.third.id, spot_id: Spot.find(22).id)
@@ -387,7 +387,7 @@
   Spot.create(title: 'Waimanalo Beach Apartment', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 350, lat: 21.335071, lng: -157.698762)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach1.jpeg", spot_id: Spot.find(23).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpg", spot_id: Spot.find(23).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpeg", spot_id: Spot.find(23).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.second.id, spot_id: Spot.find(23).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.find(23).id)
@@ -439,8 +439,8 @@
 
   Spot.create(title: 'Clean & Large Apartment', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 190, lat: -8.714733, lng: 115.168624)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/kitchen5.jpg", spot_id: Spot.find(26).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpg", spot_id: Spot.find(26).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/kitchen5.jpeg", spot_id: Spot.find(26).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/bath2.jpeg", spot_id: Spot.find(26).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.second.id, spot_id: Spot.find(26).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.find(26).id)
@@ -456,7 +456,7 @@
 
   Spot.create(title: 'Apartment close to the Beach', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 250, lat: -8.796326, lng: 115.230953)
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach9.jpg", spot_id: Spot.find(27).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach9.jpeg", spot_id: Spot.find(27).id )
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/kitchen2.jpeg", spot_id: Spot.find(27).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.second.id, spot_id: Spot.find(27).id)
@@ -508,7 +508,7 @@
   Spot.create(title: 'Room near Nusa Dua', description: 'Enjoy & Maximise your stay in the heart of the beach area with a private room in a modern renovated unit. Located right between the most popular two beaches, a short walk to the beach, public transport, restaurants, nightlife and attractions!',
     price: 250, lat: -8.805740, lng: 115.229818)
     SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/beach2.jpeg", spot_id: Spot.find(30).id )
-    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpg", spot_id: Spot.find(30).id )
+    SpotImage.create(image_url: "https://s3.amazonaws.com/balmybnb-dev/living5.jpeg", spot_id: Spot.find(30).id )
 
     Booking.create(start_date: '01-04-2018', end_date: '11-04-2018', user_id: User.second.id, spot_id: Spot.find(30).id)
     Booking.create(start_date: '15-04-2018', end_date: '19-04-2018', user_id: User.second.id, spot_id: Spot.find(30).id)
