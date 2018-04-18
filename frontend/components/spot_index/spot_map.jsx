@@ -8,7 +8,7 @@ class SpotMap extends React.Component {
   }
 
   // lat: 34.019956, lng: -118.824270
-  
+
   componentDidMount() {
     const query = this.props.location.search;
     const search = new URLSearchParams(query);
@@ -43,13 +43,14 @@ class SpotMap extends React.Component {
     const search = new URLSearchParams(query);
     this.lat = parseFloat(search.get("lat"));
     this.lng = parseFloat(search.get("lng"));
-    if (this.lat !== oldLat || this.lng !== oldLng ) {
+    if (this.lat !== oldLat || this.lng !== oldLng) {
       const mapOptions = {
         center: {
           lat: this.lat,
-          lng: this.lng },
+          lng: this.lng
+        },
         zoom: 10
-    };
+      };
 
       this.map = new google.maps.Map(this.mapNode, mapOptions);
       this.MarkerManager = new MarkerManager(this.map);

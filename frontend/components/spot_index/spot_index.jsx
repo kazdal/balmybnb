@@ -15,12 +15,9 @@ export default class SpotIndex extends React.Component {
   }
 
   // componentWillUpdate(nextProps) {
-  //   this.reverseGeocode(nextProps.coordinates);
   // }
 
   // reverseGeocode() {
-  //   let lat = this.props.coordinates[0];
-  //   let lng = this.props.coordinates[1];
   //   let latlng = new google.maps.LatLng(lat, lng);
   //   let geocoder = new google.maps.Geocoder();
   //   geocoder.geocode({ latLng: latlng }, (results, status) => {

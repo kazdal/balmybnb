@@ -11,8 +11,7 @@ const msp = state => {
   return {
     spots: Object.assign([], state.entities.spots),
     spotImages: Object.assign([], state.entities.spotImages),
-    reviews: Object.values(state.entities.reviews),
-    coordinates: state.ui.coordinates
+    reviews: Object.values(state.entities.reviews)
   };
 };
 
