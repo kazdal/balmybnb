@@ -19,7 +19,7 @@
   animation: home-page ease 24s both infinite; */
 
   /*-- Fallback image for desktop --*/
-  background-image: url(https://s3.amazonaws.com/balmybnb-dev/3.png);
+  background-image: url(https://s3.amazonaws.com/balmybnb-dev/home-waves.jpeg);
   /* background-image: url(https://s3.amazonaws.com/balmybnb-dev/2.jpg); */
   /* background-image:url(https://s3.amazonaws.com/balmybnb-dev/seashells.jpeg); */
 }
