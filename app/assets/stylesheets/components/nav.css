@@ -122,6 +122,7 @@
   height: 50px;
   border: 1px solid #DBDBDB;
   margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .spot-index-nav-bar > .nav-bar > .nav-left > .home-search-bar-form {
   margin-left: 25px;
