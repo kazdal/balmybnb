@@ -1,5 +1,5 @@
 # balmybnb
-#### [Live Link](http://balmybnb.herokuapp.com) ☀️ 😎
+#### [Live Link](http://balmybnb.dkang.me) ☀️ 😎
 
 balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux frontend with a Ruby on Rails backend and a PostgreSQL database. balmybnb focuses on warm climates around the world.
 
