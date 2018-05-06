@@ -5,6 +5,11 @@ balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux 
 
 ![](https://media.giphy.com/media/69sRU1Lc6iz9Tx58Zc/giphy.gif)
 
+#### Homepage
+![]()
+
+
+
 ##### Technologies used
 1. Javascript
 1. Ruby on Rails for backend

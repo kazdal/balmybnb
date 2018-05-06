@@ -23,13 +23,13 @@ const App = () => (
       <Route exact path="/spots" component={NavContainer} />
       <Route path="/" component={NavContainer} />
     </Switch>
-    <Modal />
+    <Modal/>
 
     <Route exact path="/" component={Home} />
     <ProtectedRoute exact path="/bookings" component={BookingIndexContainer} />
     <Route exact path="/spots" component={SearchContainer} />
     <Route exact path="/spots/:spotId" component={SpotShowContainer} />
-    <Footer />
+    <Footer/>
   </div>
 );
 
