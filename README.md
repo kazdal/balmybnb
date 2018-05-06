@@ -9,7 +9,6 @@ balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux 
 ![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/home.png)
 The homepage is features a search bar that is built using Google Places Autocomplete. This page also features handpicked locations that are currently recommended.
 
-
 #### Search
 ![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/search.png)
 
