@@ -6,8 +6,23 @@ balmybnb is a single page app inspired by Airbnb. It utilizes a React and Redux 
 ![](https://media.giphy.com/media/69sRU1Lc6iz9Tx58Zc/giphy.gif)
 
 #### Homepage
-![]()
+![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/home.png)
+The homepage is features a search bar that is built using Google Places Autocomplete. This page also features handpicked locations that are currently recommended.
 
+
+#### Search
+![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/search.png)
+
+After utilizing the search bar on the home page users are brought to the search results page. Right after the search bar is used the Google Map is centered to the searched location. The backend is then queried for only the spots within the current map bounds. Any movement of the map will query the backend based on the latest map bounds.
+
+On this page users can browse their search results and can filter according to price.
+
+#### Spot Show
+![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/show.png)
+
+This page allows users to view a specific spot's images, create a booking and leave a review. The booking calendar utilizes AirBnB engineering's own calendar library, React-Dates.
+
+![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/calendar.png)
 
 
 ##### Technologies used
