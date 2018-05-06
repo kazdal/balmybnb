@@ -19,7 +19,7 @@ On this page users can browse their search results and can filter according to p
 #### Spot Show
 ![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/show.png)
 
-This page allows users to view a specific spot's images, create a booking and leave a review. The booking calendar utilizes AirBnB engineering's own calendar library, React-Dates.
+This page allows users to view a specific spot's images, create a booking and leave a review. The booking calendar utilizes AirBnB engineering's own calendar library, React-Dates. Dates that are booked are blocked out and unselectable.
 
 ![](https://raw.githubusercontent.com/dkvng/balmybnb/master/wiki/calendar.png)
 
