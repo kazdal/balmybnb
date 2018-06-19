@@ -62,7 +62,7 @@
   text-decoration: none;
   width: 250px;
   height: 75px;
-  border: 1px solid #DBDBDB;
+  border: 1px solid #dbdbdb;
   display: flex;
   overflow: hidden;
   border-radius: 3px;
@@ -86,7 +86,9 @@
 .home-explore-section h1 {
   font-weight: bold;
   font-size: 27px;
-  margin: 30px 0 20px 0;
+  margin: 30px 0 0 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .home-explore-section h3 {
@@ -139,7 +141,7 @@
   width: 13%;
   height: 50px;
   border: none;
-  background-color: #FC515F;
+  background-color: #fc515f;
   color: white;
   font-size: 19px;
   border-radius: 4px;
@@ -153,28 +155,28 @@
 }
 
 .pac-item {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 18px;
   min-height: 45px;
   color: #484848;
   display: flex;
   align-items: center;
-
 }
 
 .pac-item-query {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 18px;
   color: #484848;
 }
 
-.pac-item:hover, .pac-item-selected {
-  background-color: rgba(0, 132, 137, .3);
+.pac-item:hover,
+.pac-item-selected {
+  background-color: rgba(0, 132, 137, 0.3);
 }
 
 .pac-matched {
   font-size: 18px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 400;
 }
 
@@ -194,38 +196,33 @@
 }
 
 .pac-icon:after {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   content: "e55f";
   color: black;
-
 }
 
 .pac-container:after {
-    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+  /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
 
-    background-image: none !important;
-    height: 0px;
+  background-image: none !important;
+  height: 0px;
 }
 
-
-.home-explore-mosaic {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap:wrap;
+.home-explore-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 350px 350px 350px;
+  grid-gap: 20px;
+  width: 60%;
+  color: #484848;
 }
 
-.home-explore-mosaic > div {
-}
-
-.home-explore-mosaic > div:hover {
+.home-explore-section > div:hover {
   cursor: pointer;
   -webkit-filter: brightness(1.01);
-
 }
 
-.home-explore-mosaic > div > h3 {
+.home-explore-section > div > h3 {
   color: white;
   font-size: 25px;
   text-shadow: 1px 1px 40px rgba(22, 23, 31, 0.4);
@@ -234,23 +231,18 @@
 }
 
 .home-explore-mosaic-1x {
-  width: 25%;
-  height: 350px;
+  /* width: 25%; */
+  /* height: 350px; */
 }
 
 .home-explore-mosaic-2x {
-  width: 49%;
-  height: 350px;
-  margin: 2% 2% 0 0;
-}
-
-.home-explore-mosaic-2x:nth-of-type(odd) {
-  margin-right: 0px;
+  height: 100%;
 }
 
 .home-explore-mosaic-4x {
-  width: 100%;
-  height: 350px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 100%;
 }
 
 .australia {
@@ -267,10 +259,6 @@
   background-position: center;
 
   background-image: url(https://s3.amazonaws.com/balmybnb-dev/malibu.jpeg);
-}
-
-.home-explore-mosaic > .california > h3 {
-  /* text-shadow: 6px 2px 40px rgb(22, 23, 31); */
 }
 
 .miami {

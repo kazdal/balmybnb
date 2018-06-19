@@ -26,42 +26,40 @@ class Home extends React.Component {
         <section className="home-explore-section">
           <h1>Explore balmybnb</h1>
 
-          <section className="home-explore-mosaic">
-            <div
-              className="home-explore-mosaic-4x australia"
-              onClick={() => this.handleExploreMosaic(-28.002662, 153.400253)}
-            >
-              <h3>Australia</h3>
-            </div>
+          <div
+            className="home-explore-mosaic-4x australia"
+            onClick={() => this.handleExploreMosaic(-28.002662, 153.400253)}
+          >
+            <h3>Australia</h3>
+          </div>
 
-            <div
-              className="home-explore-mosaic-2x california"
-              onClick={() => this.handleExploreMosaic(34.026265, -118.497149)}
-            >
-              <h3>Los Angeles</h3>
-            </div>
+          <div
+            className="home-explore-mosaic-2x california"
+            onClick={() => this.handleExploreMosaic(34.026265, -118.497149)}
+          >
+            <h3>Los Angeles</h3>
+          </div>
 
-            <div
-              className="home-explore-mosaic-2x miami"
-              onClick={() => this.handleExploreMosaic(25.827377, -80.124694)}
-            >
-              <h3>Miami</h3>
-            </div>
+          <div
+            className="home-explore-mosaic-2x miami"
+            onClick={() => this.handleExploreMosaic(25.827377, -80.124694)}
+          >
+            <h3>Miami</h3>
+          </div>
 
-            <div
-              className="home-explore-mosaic-2x panama"
-              onClick={() => this.handleExploreMosaic(21.462437, -157.965161)}
-            >
-              <h3>Hawaii</h3>
-            </div>
+          <div
+            className="home-explore-mosaic-2x panama"
+            onClick={() => this.handleExploreMosaic(21.462437, -157.965161)}
+          >
+            <h3>Hawaii</h3>
+          </div>
 
-            <div
-              className="home-explore-mosaic-2x maldives"
-              onClick={() => this.handleExploreMosaic(-8.561893, 115.211785)}
-            >
-              <h3>Bali</h3>
-            </div>
-          </section>
+          <div
+            className="home-explore-mosaic-2x maldives"
+            onClick={() => this.handleExploreMosaic(-8.561893, 115.211785)}
+          >
+            <h3>Bali</h3>
+          </div>
         </section>
       </section>
     );
@@ -81,7 +79,6 @@ class Home extends React.Component {
 
 const msp = state => ({});
 
-const mdp = dispatch => ({
-});
+const mdp = dispatch => ({});
 
 export default withRouter(connect(msp, mdp)(Home));
